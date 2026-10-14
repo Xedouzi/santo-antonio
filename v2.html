@@ -227,6 +227,9 @@
   }
   .comparador img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
   .comparador .ad-depois { clip-path: inset(0 0 0 var(--pos)); }
+  .comparador.trocando img { opacity: .25; }
+  .comparador img { transition: opacity .25s; }
+  @media (prefers-reduced-motion: reduce) { .comparador img { transition: none; } }
   .ad-rotulo { position: absolute; top: .85rem; z-index: 2; padding: .3rem .7rem; border-radius: 8px; background: rgba(30, 33, 40, .82); color: #fff; font-size: .95rem; font-weight: 600; line-height: 1.3; pointer-events: none; transition: opacity .2s; }
   .ad-rotulo-antes { left: .85rem; }
   .ad-rotulo-depois { right: .85rem; background: var(--amarelo); color: var(--grafite); }
@@ -241,7 +244,6 @@
   .comparador input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
   .comparador.mostrando .ad-depois { transition: clip-path .9s cubic-bezier(.45, 0, .2, 1); }
   .comparador.mostrando .ad-barra { transition: left .9s cubic-bezier(.45, 0, .2, 1); }
-  .ad-legenda { width: min(100%, calc(70svh * var(--prop, 1.333))); margin-top: .75rem; color: var(--tinta-2); font-size: 1rem; }
   /* lista de trabalhos */
   .ad-lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; margin: 0; padding: 0; list-style: none; }
   .ad-item {
@@ -261,7 +263,7 @@
   @media (prefers-reduced-motion: reduce) { .ad-item, .ad-rotulo { transition: none; } }
   @media (max-width: 900px) {
     .ad-grade { grid-template-columns: minmax(0, 1fr); }
-    .comparador, .ad-legenda { width: 100%; }
+    .comparador { width: 100%; }
     .comparador { max-height: none; }
     .ad-lista { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
   }
@@ -693,7 +695,6 @@
             <span class="ad-barra" aria-hidden="true"><span class="ad-pegador"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6 3 12l6 6M15 6l6 6-6 6"/></svg></span></span>
             <input type="range" id="ad-range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
           </div>
-          <figcaption class="ad-legenda" id="ad-legenda"></figcaption>
         </figure>
         <div>
           <ul class="ad-lista" id="ad-lista" aria-label="Escolha o trabalho"></ul>
@@ -991,14 +992,17 @@ function adPosicao(p) {
 }
 function adMostrar(i) {
   const t = TRABALHOS[i];
-  $("#ad-antes").src = `img/${t.foto}-antes.webp`;
-  $("#ad-depois").src = `img/${t.foto}-depois.webp`;
+  const novas = [`img/${t.foto}-antes.webp`, `img/${t.foto}-depois.webp`];
+  if ($("#ad-depois").getAttribute("src") !== novas[1]) {
+    comp.classList.add("trocando");
+    /* so mostra quando as duas fotos novas estiverem prontas (no 4G a troca nao fica "parada" na foto anterior) */
+    Promise.all(novas.map((u) => { const im = new Image(); im.src = u; return im.decode().catch(() => {}); }))
+      .then(() => { $("#ad-antes").src = novas[0]; $("#ad-depois").src = novas[1]; comp.classList.remove("trocando"); });
+  }
   ["#ad-antes", "#ad-depois"].forEach((s) => { $(s).width = t.w; $(s).height = t.h; });
   $("#ad-antes").alt = `Antes: ${t.legenda}`;
   $("#ad-depois").alt = `Depois: ${t.legenda}`;
   comp.style.setProperty("--prop", (t.w / t.h).toFixed(3));
-  $(".ad-legenda").style.setProperty("--prop", (t.w / t.h).toFixed(3));
-  $("#ad-legenda").textContent = t.legenda;
   document.querySelectorAll(".ad-item").forEach((b, k) => b.setAttribute("aria-pressed", String(k === i)));
   adPosicao(50);
 }
@@ -1007,7 +1011,11 @@ $("#ad-lista").innerHTML = TRABALHOS.map((t, i) =>
 document.querySelectorAll(".ad-item").forEach((b, i) => {
   b.querySelector("strong").textContent = TRABALHOS[i].titulo;
   b.querySelector("small").textContent = TRABALHOS[i].resumo;
-  b.addEventListener("click", () => adMostrar(i));
+  b.addEventListener("click", () => {
+    adMostrar(i);
+    const r = comp.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > innerHeight) comp.scrollIntoView({ block: "center", behavior: semMovimento.matches ? "auto" : "smooth" });
+  });
 });
 /* arrastar: o dedo na horizontal move a barra; na vertical a pagina rola (touch-action: pan-y) */
 let arrastando = false;
@@ -1017,6 +1025,14 @@ comp.addEventListener("pointermove", (e) => { if (arrastando) adDoPonteiro(e); }
 ["pointerup", "pointercancel"].forEach((ev) => comp.addEventListener(ev, () => { arrastando = false; }));
 adRange.addEventListener("input", () => { comp.classList.remove("mostrando"); adPosicao(Number(adRange.value)); });
 adMostrar(0);
+if ("IntersectionObserver" in window) {
+  const pre = new IntersectionObserver((ent) => {
+    if (!ent[0].isIntersecting) return;
+    pre.disconnect();
+    TRABALHOS.forEach((t) => ["antes", "depois"].forEach((l) => { const im = new Image(); im.src = `img/${t.foto}-${l}.webp`; }));
+  }, { rootMargin: "600px 0px" });
+  pre.observe(comp);
+}
 /* uma vez so, quando aparece: a barra anda sozinha e volta, pra mostrar que da pra arrastar */
 if (!semMovimento.matches && "IntersectionObserver" in window) {
   const io = new IntersectionObserver((ent) => {
