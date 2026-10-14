@@ -64,7 +64,8 @@
 
   /* ---------- base ---------- */
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  /* fundo da janela no grafite do rodape: o que sobrar abaixo do fim (elastico da rolagem) emenda no rodape */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: #1E2128; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body { margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.125rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
   img { max-width: 100%; height: auto; display: block; }
