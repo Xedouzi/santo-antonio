@@ -163,6 +163,9 @@
   .estrelas { display: inline-flex; gap: 2px; color: var(--amarelo); }
   .estrelas svg { width: 1.1rem; height: 1.1rem; }
   .nota a { color: #fff; }
+  .nota-leva { gap: .75rem; font-size: 1.08rem; font-weight: 500; color: #E4E6EA; }
+  .nota-leva strong { color: #fff; font-weight: 700; }
+  .nota-leva .leva-setas { flex: none; width: 2.6rem; height: 1.9rem; color: var(--amarelo); }
   @media (max-width: 760px) {
     /* celular: a foto em cima, inteira; o texto embaixo, no grafite */
     .abertura { min-height: 0; }
@@ -178,7 +181,7 @@
   .faixa-item:first-child { padding-left: 0; }
   .faixa-item + .faixa-item { border-left: 1.5px solid rgba(30, 33, 40, .22); }
   .faixa-item svg { flex: none; width: 2.4rem; height: 2.4rem; }
-  .faixa-item .leva-setas { width: 3rem; }
+  .faixa-nota svg { width: 2.5rem; height: 2.5rem; }
   .faixa-item p { display: grid; min-width: 0; line-height: 1.3; }
   .faixa-item strong { font-size: 1.35rem; font-weight: 800; font-style: italic; font-stretch: 78%; font-family: var(--fonte-titulo); line-height: 1.15; }
   .faixa-item span { font-weight: 500; font-size: 1rem; }
@@ -510,16 +513,16 @@
       <a class="btn" href="#orcamento">Pedir orçamento</a>
       <a class="btn btn-vidro" id="zap-abertura" href="https://wa.me/5516992399066" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
-    <p class="nota"><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg></span><a href="https://www.google.com/maps/place/Santo+Ant%C3%B4nio+Est%C3%A9tica+Automotiva/@-21.3397606,-47.7351538,17z/data=!4m8!3m7!1s0x94b9c93fb84a79d9:0xdaf388b0cb5b3c23!8m2!3d-21.3397606!4d-47.7351538!9m1!1b1!16s%2Fg%2F11sr8wr6gx" target="_blank" rel="noopener">5,0 no Google, com 49 avaliações</a></p>
+    <p class="nota nota-leva"><svg class="leva-setas" viewBox="0 0 66 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M6 15h50M44 4l12 11-12 11M60 33H10M22 22 10 33l12 11"/></svg><span><strong>Leva e traz:</strong> buscamos e devolvemos o seu carro</span></p>
   </div>
 </section>
 
 <div class="faixa">
   <div class="envoltorio faixa-grade">
-    <div class="faixa-item">
-      <svg class="leva-setas" viewBox="0 0 66 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M6 15h50M44 4l12 11-12 11M60 33H10M22 22 10 33l12 11"/></svg>
-      <p><strong>Leva e traz</strong><span>Buscamos e devolvemos</span></p>
-    </div>
+    <a class="faixa-item faixa-nota" href="https://www.google.com/maps/place/Santo+Ant%C3%B4nio+Est%C3%A9tica+Automotiva/@-21.3397606,-47.7351538,17z/data=!4m8!3m7!1s0x94b9c93fb84a79d9:0xdaf388b0cb5b3c23!8m2!3d-21.3397606!4d-47.7351538!9m1!1b1!16s%2Fg%2F11sr8wr6gx" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg>
+      <p><strong>5,0 no Google</strong><span>49 avaliações</span></p>
+    </a>
     <div class="faixa-item faixa-agora" id="status">
       <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></g></svg>
       <p><strong><i></i><span></span></strong><span class="faixa-agora-sub"></span></p>
