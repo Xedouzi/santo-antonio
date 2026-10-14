@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="only light">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#111216">
 <title>Santo Antônio Estética Automotiva | Cravinhos, SP</title>
 <meta name="description" content="Lavagem simples e completa, higienização de bancos e carpetes, lavagem de motor, polimento e cristalização no Centro de Cravinhos. Leva e traz. Rua Bernardino de Campos, 94.">
 <!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%231E2128%27%2F%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20font-family%3D%27Arial%27%20font-style%3D%27italic%27%20font-weight%3D%27700%27%20font-size%3D%2714%27%20fill%3D%27%23FDDC05%27%20text-anchor%3D%27middle%27%3ESA%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,75..100,400..800;1,75..100,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600..800&family=Inter:wght@400..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +37,7 @@
      Amarelo so como FUNDO (botao, faixa): no branco ele some.
      ============================================================ */
   :root {
-    color-scheme: only light;
+    color-scheme: dark;
     --branco:   #FFFFFF;
     --nevoa:    #FFF9DE;   /* amarelo da marca bem diluido */
     --linha:    #E9E4CF;
@@ -60,7 +60,7 @@
   }
   /* reservas medidas com canvas: texto Saira = Arial x 1,024; titulo (italico 750, largura 78%) = Arial negrito italico x 0,859 */
   @font-face { font-family: "Saira reserva"; src: local("Arial"); size-adjust: 102.4%; }
-  @font-face { font-family: "Saira titulo reserva"; src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), local("Arial"); font-style: italic; font-weight: 600 900; size-adjust: 85.9%; }
+  @font-face { font-family: "Saira titulo reserva"; src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), local("Arial"); font-weight: 600 900; size-adjust: 85.9%; }
 
   /* ---------- base ---------- */
   *, *::before, *::after { box-sizing: border-box; }
@@ -75,9 +75,9 @@
   :focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
   h1, h2, h3 { margin: 0; line-height: 1.05; text-wrap: balance; overflow-wrap: break-word; }
   /* titulos: Saira condensada e inclinada, como o nome no letreiro */
-  h1, h2 { font-weight: 750; font-style: italic; font-stretch: 78%; font-family: var(--fonte-titulo); letter-spacing: -.005em; }
+  h1, h2 { font-weight: 750; font-family: var(--fonte-titulo); letter-spacing: -.005em; }
   h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.3rem); }
-  h3 { font-size: 1.3rem; font-weight: 650; font-stretch: 90%; line-height: 1.2; }
+  h3 { font-size: 1.3rem; font-weight: 650; line-height: 1.2; }
   p { margin: 0; }
   p, li, label, dd, dt, small, legend, figcaption, .btn { overflow-wrap: anywhere; }
   .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
@@ -108,8 +108,8 @@
   .topo { position: relative; z-index: 20; background: var(--branco); border-bottom: 1px solid var(--linha); }
   .topo-grade { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .85rem; }
   .marca { display: grid; min-width: 0; min-height: 44px; align-content: center; text-decoration: none; color: var(--tinta); line-height: 1; }
-  .marca strong { font-size: clamp(1.75rem, 1.4rem + 1.1vw, 2.35rem); font-weight: 800; font-style: italic; font-stretch: 78%; font-family: var(--fonte-titulo); letter-spacing: .005em; }
-  .marca span { margin-top: .25rem; font-size: clamp(.85rem, .78rem + .25vw, 1rem); font-weight: 550; font-stretch: 100%; color: var(--tinta-2); letter-spacing: .01em; }
+  .marca strong { font-size: clamp(1.75rem, 1.4rem + 1.1vw, 2.35rem); font-weight: 800; font-family: var(--fonte-titulo); letter-spacing: .005em; }
+  .marca span { margin-top: .25rem; font-size: clamp(.85rem, .78rem + .25vw, 1rem); font-weight: 550; color: var(--tinta-2); letter-spacing: .01em; }
   .menu { display: flex; flex-wrap: wrap; gap: .25rem 1.6rem; align-items: center; }
   .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; font-weight: 550; font-size: 1.02rem; }
   .menu a:hover { text-decoration: underline; text-decoration-color: var(--amarelo-forte); text-decoration-thickness: 3px; }
@@ -183,7 +183,7 @@
   .faixa-item svg { flex: none; width: 2.4rem; height: 2.4rem; }
   .faixa-nota svg { width: 2.5rem; height: 2.5rem; }
   .faixa-item p { display: grid; min-width: 0; line-height: 1.3; }
-  .faixa-item strong { font-size: 1.35rem; font-weight: 800; font-style: italic; font-stretch: 78%; font-family: var(--fonte-titulo); line-height: 1.15; }
+  .faixa-item strong { font-size: 1.35rem; font-weight: 800; font-family: var(--fonte-titulo); line-height: 1.15; }
   .faixa-item span { font-weight: 500; font-size: 1rem; }
   .faixa-item strong span { font: inherit; }
   a.faixa-item:hover strong { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
@@ -273,7 +273,7 @@
   .serv-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 42% 50%; border-radius: var(--raio); }
   .serv-foto figcaption { font-size: .95rem; color: var(--tinta-2); }
   .serv-grupos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem clamp(1.5rem, 4vw, 3rem); }
-  .serv-grupo h3 { padding-bottom: .6rem; border-bottom: 3px solid var(--grafite); font-size: 1.45rem; font-style: italic; font-weight: 750; font-stretch: 78%; font-family: var(--fonte-titulo); }
+  .serv-grupo h3 { padding-bottom: .6rem; border-bottom: 3px solid var(--grafite); font-size: 1.45rem; font-weight: 750; font-family: var(--fonte-titulo); }
   .serv-grupo ul { margin: 0; padding: 0; list-style: none; }
   .serv-grupo li { display: grid; grid-template-columns: .55rem minmax(0, 1fr); gap: .75rem; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--linha); }
   .serv-grupo li::before { content: ""; width: .55rem; height: .55rem; border-radius: 2px; background: var(--amarelo-forte); transform: translateY(-.1rem) skewX(-12deg); }
@@ -289,7 +289,7 @@
   /* ---------- sairam daqui: tira de fotos que rola de lado ---------- */
   .galeria { margin-top: clamp(3rem, 7vw, 5rem); }
   .galeria-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 1.25rem; }
-  .galeria-topo h3 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); font-style: italic; font-weight: 750; font-stretch: 78%; font-family: var(--fonte-titulo); }
+  .galeria-topo h3 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); font-weight: 750; font-family: var(--fonte-titulo); }
   .galeria-setas { display: flex; gap: .5rem; }
   .galeria-seta { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: var(--grafite); color: #fff; cursor: pointer; transition: background-color .2s, opacity .2s; }
   .galeria-seta:hover { background: var(--grafite-2); }
@@ -340,10 +340,10 @@
   /* linha ligando os passos */
   .ped-passos > li:not(:last-child)::after { content: ""; position: absolute; left: calc(1.2rem - 1px); top: 2.9rem; bottom: -1.6rem; width: 2px; border-radius: 2px; background: var(--linha); }
   .ped-passos > li.feito::before { box-shadow: 0 0 0 4px rgba(253, 220, 5, .3); }
-  .ped-passos > li::before { content: counter(passo); display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--amarelo); color: var(--grafite); font: italic 800 1.3rem/1 var(--fonte); font-stretch: 78%; font-family: var(--fonte-titulo); }
+  .ped-passos > li::before { content: counter(passo); display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--amarelo); color: var(--grafite); font: 800 1.3rem/1 var(--fonte); font-family: var(--fonte-titulo); }
   .ped-passos fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
-  .ped-passos legend { display: grid; padding: .3rem 0 0; margin-bottom: .85rem; font-size: 1.3rem; font-weight: 650; font-stretch: 90%; line-height: 1.25; }
-  .ped-passos legend small { font-size: .95rem; font-weight: 400; font-stretch: 100%; color: var(--tinta-2); }
+  .ped-passos legend { display: grid; padding: .3rem 0 0; margin-bottom: .85rem; font-size: 1.3rem; font-weight: 650; line-height: 1.25; }
+  .ped-passos legend small { font-size: .95rem; font-weight: 400; color: var(--tinta-2); }
   .ped-opcoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr)); gap: .5rem; }
   .ped-opcoes-largas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
   .ped-opcao { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .1rem .6rem; min-height: 56px; padding: .6rem .9rem; border-radius: 10px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); cursor: pointer; transition: background-color .2s, box-shadow .2s, color .2s; }
@@ -369,7 +369,7 @@
   .ped-painel { min-width: 0; padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: 16px; background: var(--grafite); color: #fff; }
   .ped-painel :focus-visible { outline-color: var(--amarelo); }
   .ped-envio { position: sticky; top: 1.5rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
-  .ped-envio h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem); font-style: italic; font-weight: 750; font-stretch: 78%; font-family: var(--fonte-titulo); }
+  .ped-envio h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem); font-weight: 750; font-family: var(--fonte-titulo); }
   .ped-progresso { display: grid; gap: .5rem; color: var(--cinza-claro); font-size: .98rem; }
   .ped-progresso ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .35rem; margin: 0; padding: 0; list-style: none; }
   .ped-progresso li { height: 6px; border-radius: 6px; background: rgba(255, 255, 255, .16); transition: background-color .25s; }
@@ -378,11 +378,11 @@
   .ped-envio > p { color: var(--cinza-claro); font-size: 1rem; }
   .ped-depois { display: grid; gap: .75rem; margin: .4rem 0 0; padding: 1.25rem 0 0; border-top: 1px solid rgba(255, 255, 255, .14); list-style: none; counter-reset: depois; }
   .ped-depois li { counter-increment: depois; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .7rem; align-items: baseline; color: var(--cinza-claro); }
-  .ped-depois li::before { content: counter(depois); font: italic 800 1.25rem/1 var(--fonte); font-stretch: 78%; font-family: var(--fonte-titulo); color: var(--amarelo); }
+  .ped-depois li::before { content: counter(depois); font: 800 1.25rem/1 var(--fonte); font-family: var(--fonte-titulo); color: var(--amarelo); }
   .ped-depois strong { color: #fff; font-weight: 600; }
   .conversa { overflow: hidden; border-radius: var(--raio); color: var(--tinta); }
   .conversa-topo { display: flex; align-items: center; gap: .75rem; padding: .7rem 1rem; background: var(--branco); border-bottom: 1px solid var(--linha); }
-  .conversa-selo { display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--grafite); color: var(--amarelo); font: italic 800 1rem/1 var(--fonte); font-stretch: 78%; font-family: var(--fonte-titulo); }
+  .conversa-selo { display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--grafite); color: var(--amarelo); font: 800 1rem/1 var(--fonte); font-family: var(--fonte-titulo); }
   .conversa-topo p { display: grid; min-width: 0; line-height: 1.25; }
   .conversa-topo strong { font-size: 1rem; font-weight: 600; }
   .conversa-topo small { font-size: .9rem; color: var(--tinta-2); }
@@ -405,7 +405,7 @@
   .avaliacoes :focus-visible { outline-color: var(--amarelo); }
   .aval-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.25rem 3rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
   .aval-nota { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.25rem; }
-  .aval-nota b { font: italic 800 clamp(3.4rem, 2.6rem + 3vw, 4.8rem)/.9 var(--fonte); font-stretch: 78%; font-family: var(--fonte-titulo); color: var(--amarelo); }
+  .aval-nota b { font: 800 clamp(3.4rem, 2.6rem + 3vw, 4.8rem)/.9 var(--fonte); font-family: var(--fonte-titulo); color: var(--amarelo); }
   .aval-nota > span { display: grid; gap: .3rem; color: var(--cinza-claro); }
   .aval-nota .estrelas { color: var(--amarelo); }
   .aval-nota .estrelas svg { width: 1.3rem; height: 1.3rem; }
@@ -423,7 +423,7 @@
   .contato-dados { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-content: start; }
   .contato-dados h2 { margin-bottom: .2rem; }
   .contato-dados h3 { margin-bottom: .3rem; }
-  .tel-grande { font: italic 800 clamp(2rem, 1.5rem + 2vw, 2.8rem)/1.1 var(--fonte); font-stretch: 78%; font-family: var(--fonte-titulo); color: var(--tinta); text-decoration: none; }
+  .tel-grande { font: 800 clamp(2rem, 1.5rem + 2vw, 2.8rem)/1.1 var(--fonte); font-family: var(--fonte-titulo); color: var(--tinta); text-decoration: none; }
   .tel-grande:hover { text-decoration: underline; text-decoration-color: var(--amarelo-forte); text-decoration-thickness: 4px; }
   .contato-dados .tel-outro { margin-top: .3rem; color: var(--tinta-2); }
   .link-mapa { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
@@ -481,6 +481,172 @@
 
   /* foco no fundo escuro: amarelo */
   .abertura :focus-visible { outline-color: var(--amarelo); }
+
+  /* =================== v2 escura =================== */
+  :root {
+    --fonte: "Inter", "Inter reserva", Arial, sans-serif;
+    --fonte-titulo: "Montserrat", "Montserrat reserva", Arial, sans-serif;
+    /* superficies escuras (os nomes antigos ficam, os valores mudam) */
+    --branco:   #111216;   /* fundo da pagina */
+    --nevoa:    #17191E;   /* secoes alternadas */
+    --cartao:   #1C1F25;
+    --linha:    rgba(255, 255, 255, .1);
+    --linha-forte: #7A7F89; /* contorno de controle: 3:1 ou mais no fundo e no cartao */
+    --tinta:    #F4F5F7;
+    --tinta-2:  #A8ADB7;   /* 8:1 no fundo */
+    --grafite:  #0B0C0F;
+    --grafite-2:#1C1F25;
+    --amarelo:  #F9CF1B;
+    --amarelo-forte: #F2B807;
+    --raio: 16px;
+  }
+  html { background: #0B0C0F; }
+  /* reservas medidas com canvas: Inter = Arial x 1,065; Montserrat 800 = Arial negrito x 1,078 */
+  @font-face { font-family: "Inter reserva"; src: local("Arial"); size-adjust: 106.5%; }
+  @font-face { font-family: "Montserrat reserva"; src: local("Arial Bold"), local("Arial-BoldMT"), local("Arial"); font-weight: 600 900; size-adjust: 107.8%; }
+  .a-preencher { color: #15161A; }
+  .ped-opcao { box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  body { color: var(--tinta); }
+  h1, h2 { font-weight: 800; letter-spacing: -.02em; }
+  h2 { font-size: clamp(1.9rem, 1.3rem + 2.2vw, 3rem); }
+  h3 { font-family: var(--fonte-titulo); font-weight: 700; letter-spacing: -.01em; }
+  :focus-visible { outline-color: var(--amarelo); }
+  a { color: var(--tinta); }
+  .marca strong { font-weight: 800; letter-spacing: -.03em; font-size: clamp(1.5rem, 1.25rem + .9vw, 2rem); }
+  .marca span { color: var(--amarelo); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 600; }
+
+  /* botoes: pilula amarela com brilho */
+  .btn { border-radius: 999px; background: linear-gradient(180deg, #FFDB3A, var(--amarelo-forte)); color: #15161A; font-family: var(--fonte-titulo); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .95rem;
+    box-shadow: 0 10px 30px -10px rgba(249, 207, 27, .55); }
+  .btn:hover { background: linear-gradient(180deg, #FFE45E, #F5C518); }
+  .btn-vidro, .btn-linha, .btn-grafite { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .75); }
+  .btn-vidro:hover, .btn-linha:hover, .btn-grafite:hover { background: rgba(255, 255, 255, .08); }
+
+  /* topo escuro */
+  .topo { background: rgba(17, 18, 22, .96); border-bottom-color: var(--linha); }
+  .menu a { color: var(--tinta); }
+  .menu a:hover { text-decoration-color: var(--amarelo); }
+  .menu .menu-tel { background: transparent; color: var(--amarelo); box-shadow: inset 0 0 0 1.5px var(--amarelo); border-radius: 999px; }
+  .menu .menu-tel:hover { background: rgba(249, 207, 27, .1); }
+  .menu .menu-tel svg { color: var(--amarelo); }
+  .topo.compacto .menu-botao span { background: var(--amarelo); }
+  .topo.compacto .menu { background: #15171C; box-shadow: 0 18px 30px -22px rgba(0, 0, 0, .9); }
+  .topo.compacto .menu .menu-tel { justify-content: center; }
+
+  /* abertura: Amarok bem escurecida, luz so do lado direito */
+  .abertura { background: #0B0C0F; min-height: clamp(600px, 90vh, 900px); }
+  .abertura-fundo { filter: brightness(.62) saturate(.85) contrast(1.08); object-position: 70% 55%; }
+  .abertura::before { background:
+      radial-gradient(ellipse 70% 80% at 72% 50%, rgba(11, 12, 15, 0) 0%, rgba(11, 12, 15, .55) 60%, rgba(11, 12, 15, .92) 100%),
+      linear-gradient(90deg, rgba(11, 12, 15, .96) 0%, rgba(11, 12, 15, .85) 34%, rgba(11, 12, 15, .2) 64%, rgba(11, 12, 15, 0) 100%); }
+  .abertura-conteudo { grid-template-columns: minmax(0, 44rem) minmax(0, 20rem); justify-content: space-between; align-items: end; gap: 2rem; }
+  .abertura-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; min-width: 0; }
+  .abertura h1 { display: grid; font-size: min(clamp(2.6rem, 1.3rem + 4.2vw, 5rem), 11.5vw);   /* 11.5vw: a palavra mais longa (CUIDADO.) cabe mesmo com letra grande */ line-height: 1; text-transform: uppercase; letter-spacing: -.025em; }
+  .h1-destaque { color: var(--amarelo); }
+  /* reflexo de polimento: uma faixa de luz passa uma vez pelas letras amarelas */
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    @media (prefers-reduced-motion: no-preference) {
+      .h1-destaque { background: linear-gradient(105deg, var(--amarelo) 0 42%, #FFF8D6 50%, var(--amarelo) 58% 100%) 100% 0 / 260% 100% no-repeat;
+        -webkit-background-clip: text; background-clip: text; color: transparent; animation: reflexo 1.7s .6s cubic-bezier(.45, 0, .2, 1) both; }
+    }
+  }
+  @keyframes reflexo { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  .abertura-texto > p { color: #C9CDD4; font-size: clamp(1.05rem, .98rem + .3vw, 1.2rem); max-width: 36rem; }
+  .abertura-acoes .btn { min-height: 58px; padding: .8rem 1.7rem; font-size: .98rem; }
+  .abertura-icones { display: flex; flex-wrap: wrap; gap: .75rem 0; margin: .4rem 0 0; padding: 0; list-style: none; }
+  .abertura-icones li { display: flex; align-items: center; gap: .6rem; min-width: 0; padding-right: 1.25rem; margin-right: 1.25rem; border-right: 1px solid rgba(255, 255, 255, .18); font-weight: 600; font-size: 1rem; color: #E9EBEF; }
+  .abertura-icones li:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+  .abertura-icones svg { flex: none; width: 1.6rem; height: 1.6rem; color: var(--amarelo); }
+  /* cartao do antes e depois: metade barro, metade limpa; no hover a linha anda */
+  .abertura-ad { display: grid; gap: .75rem; padding: .75rem .75rem 1rem; border-radius: var(--raio); background: rgba(17, 18, 22, .72); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12), 0 30px 60px -30px rgba(0, 0, 0, .9);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: #fff; text-decoration: none; }
+  .abertura-ad-fotos { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 10px; }
+  .abertura-ad-fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .abertura-ad-depois { clip-path: inset(0 0 0 50%); transition: clip-path .5s cubic-bezier(.2, .7, .2, 1); }
+  .abertura-ad-fotos::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; margin-left: -1.5px; background: var(--amarelo); transition: left .5s cubic-bezier(.2, .7, .2, 1); }
+  .abertura-ad:hover .abertura-ad-depois { clip-path: inset(0 0 0 28%); }
+  .abertura-ad:hover .abertura-ad-fotos::after { left: 28%; }
+  .abertura-ad-rotulo { position: absolute; top: .5rem; left: .5rem; z-index: 1; padding: .15rem .5rem; border-radius: 6px; background: rgba(11, 12, 15, .8); font-size: .8rem; font-weight: 600; }
+  .abertura-ad-rotulo-depois { left: auto; right: .5rem; background: var(--amarelo); color: #15161A; }
+  .abertura-ad-texto { display: grid; gap: .1rem; padding-inline: .25rem; line-height: 1.3; }
+  .abertura-ad-texto strong { font: 700 1.05rem/1.25 var(--fonte-titulo); }
+  .abertura-ad-texto span { color: var(--tinta-2); font-size: .95rem; }
+  .abertura-ad:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .abertura-ad-depois, .abertura-ad-fotos::after { transition: none; } }
+  @media (max-width: 1100px) { .abertura-conteudo { grid-template-columns: minmax(0, 44rem); } .abertura-ad { display: none; } }
+  @media (max-width: 760px) {
+    .abertura-fundo { filter: brightness(.8) saturate(.9); }
+    .abertura-icones { display: grid; gap: .6rem; }
+    .abertura-icones li { border-right: 0; margin-right: 0; padding-right: 0; }
+  }
+
+  /* faixa: escura, icones amarelos */
+  .faixa { background: #15171C; color: var(--tinta); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+  .faixa-item svg { color: var(--amarelo); }
+  .faixa-item span { color: var(--tinta-2); }
+  .faixa-item + .faixa-item { border-left-color: var(--linha); }
+  .faixa-agora i { background: #4ADE80; box-shadow: 0 0 0 3px rgba(74, 222, 128, .2); }
+  .faixa-agora.fechado i { background: #FF8A80; box-shadow: 0 0 0 3px rgba(255, 138, 128, .2); }
+  @media (max-width: 640px) { .faixa-item + .faixa-item { border-top-color: var(--linha); } }
+
+  /* antes e depois */
+  .comparador { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .9); }
+  .ad-item:hover { background: var(--cartao); }
+  .ad-item[aria-pressed="true"] { background: var(--cartao); box-shadow: inset 0 0 0 1.5px var(--amarelo); color: var(--tinta); }
+  .ad-item[aria-pressed="true"] small { color: var(--tinta-2); }
+  .ad-rotulo { background: rgba(11, 12, 15, .82); }
+
+  /* servicos */
+  .serv-grupo h3 { border-bottom-color: var(--amarelo); }
+  .serv-grupo li::before { background: var(--amarelo); }
+
+  /* galeria */
+  .galeria-seta { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha); }
+  .galeria-seta:hover { background: #262A31; }
+
+  /* pedido: opcoes escuras, escolhida em amarelo; painel um tom acima */
+  .ped-opcao { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .ped-opcao:hover { box-shadow: inset 0 0 0 1.5px var(--tinta-2); }
+  .ped-opcao:has(input:checked) { background: var(--amarelo); color: #15161A; }
+  .ped-opcao:has(input:checked) small { color: #3A3420; }
+  .ped-opcao:has(input:checked)::after { background-color: #15161A;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%23F9CF1B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .ped-opcao:has(input:focus-visible) { outline-color: var(--amarelo); }
+  .ped-campo input { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .ped-passos > li:not(:last-child)::after { background: var(--linha); }
+  .ped-painel { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha), inset 0 4px 0 var(--amarelo); }
+  .conversa-topo { background: #202C33; border-bottom-color: #2A3942; color: #E9EDEF; }   /* WhatsApp escuro */
+  .conversa-topo small { color: #8696A0; }
+  .conversa-selo { background: #0B0C0F; }
+  .conversa-corpo { background: #0B141A; }
+  .balao { background: #005C4B; color: #E9EDEF; }
+  .balao::after { border-top-color: #005C4B; }
+
+  /* avaliacoes: faixa amarela */
+  .avaliacoes { background: var(--amarelo); color: #15161A; }
+  .avaliacoes :focus-visible { outline-color: #15161A; }
+  .aval-nota b, .aval-nota .estrelas { color: #15161A; }
+  .aval-nota > span { color: #3A3420; }
+  .aval-lista li { border-top-color: #15161A; }
+  .aval-lista p { color: #3A3420; }
+  .aval-lista strong { color: #15161A; }
+  .aval-link { color: #15161A; text-decoration-color: #15161A; }
+
+  /* onde estamos */
+  .horarios div.hoje { background: var(--amarelo); color: #15161A; }
+  .horario-agora { color: #4ADE80; }
+  .horario-agora.fechado { color: #FF8A80; }
+  .mapa { background-color: #17191E; background-image:
+      linear-gradient(115deg, transparent 47%, #23262D 47%, #23262D 51%, transparent 51%),
+      repeating-linear-gradient(0deg, transparent 0 54px, #23262D 54px 60px),
+      repeating-linear-gradient(90deg, transparent 0 84px, #23262D 84px 90px); }
+  .mapa-capa { background: var(--cartao); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .9); }
+  .mapa-pino { stroke: var(--amarelo); }
+  .tel-grande { color: var(--tinta); }
+
+  /* rodape */
+  .rodape { background: #0B0C0F; border-top: 1px solid var(--linha); }
+  .rodape .marca span { color: var(--amarelo); }
 </style>
 </head>
 <body>
@@ -503,19 +669,27 @@
 <section class="abertura" aria-labelledby="titulo">
   <img class="abertura-fundo" src="img/abertura-1280.webp" srcset="img/abertura-1280.webp 1280w, img/abertura-2400.webp 2400w" sizes="100vw" width="1280" height="960" fetchpriority="high" alt="Volkswagen Amarok cinza com rodas pretas, limpa e brilhando, no pátio da Santo Antônio">
   <div class="envoltorio abertura-conteudo">
-    <h1 id="titulo">Estética automotiva no Centro de Cravinhos</h1>
-    <p>Lavagem completa, higienização de bancos e carpetes, polimento e cuidado com cada detalhe. Buscamos e devolvemos o seu carro.</p>
-    <ul class="abertura-lista">
-      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Lavagem simples e completa</li>
-      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Polimento e cristalização</li>
-      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Bancos e carpetes</li>
-      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Revestimento de volante</li>
-    </ul>
+    <div class="abertura-texto">
+    <h1 id="titulo"><span>Seu carro merece</span> <span class="h1-destaque">esse cuidado.</span></h1>
+    <p>Estética automotiva no Centro de Cravinhos: lavagem completa, higienização de bancos e carpetes, polimento e cristalização. Buscamos e devolvemos o seu carro.</p>
     <div class="abertura-acoes">
-      <a class="btn" href="#orcamento">Pedir orçamento</a>
-      <a class="btn btn-vidro" id="zap-abertura" href="https://wa.me/5516992399066" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn" href="#orcamento"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5 5.3 16A8 8 0 1 1 8 18.7z"/></svg>Pedir orçamento</a>
+      <a class="btn btn-vidro" href="#antes-depois">Ver antes e depois</a>
     </div>
-    <p class="nota nota-leva"><svg class="leva-setas" viewBox="0 0 66 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M6 15h50M44 4l12 11-12 11M60 33H10M22 22 10 33l12 11"/></svg><span><strong>Leva e traz:</strong> buscamos e devolvemos o seu carro</span></p>
+    <ul class="abertura-icones">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h15M14 4l4 4-4 4M21 16H6M10 12l-4 4 4 4"/></g></svg><span>Leva e traz</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></svg><span>Desde 2016</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2"/><path d="M3.5 10.5h6.3M14.2 10.5h6.3M12 14.2V21"/></g></svg><span>Revestimento de volante</span></li>
+    </ul>
+    </div>
+    <a class="abertura-ad" href="#antes-depois">
+      <span class="abertura-ad-fotos" aria-hidden="true">
+        <img src="img/picape-antes.webp" width="1080" height="810" loading="lazy" alt="">
+        <img class="abertura-ad-depois" src="img/picape-depois.webp" width="1080" height="810" loading="lazy" alt="">
+        <span class="abertura-ad-rotulo">Antes</span><span class="abertura-ad-rotulo abertura-ad-rotulo-depois">Depois</span>
+      </span>
+      <span class="abertura-ad-texto"><strong>Antes e depois</strong><span>S10 que chegou coberta de barro</span></span>
+    </a>
   </div>
 </section>
 
@@ -839,7 +1013,7 @@ addEventListener("scroll", mostrarFlutuante, { passive: true });
 
 /* ---------- WhatsApp ---------- */
 const geral = zap("Olá! Vim pelo site da Santo Antônio Estética Automotiva e gostaria de atendimento.");
-["#zap-topo", "#zap-abertura", "#zap-faixa", "#zap-contato", "#zap-flutuante"].forEach((s) => { $(s).href = geral; });
+["#zap-topo", "#zap-faixa", "#zap-contato", "#zap-flutuante"].forEach((s) => { $(s).href = geral; });
 
 /* ---------- antes e depois ---------- */
 const comp = $("#comparador"), adRange = $("#ad-range");
