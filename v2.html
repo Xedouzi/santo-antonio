@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#111216">
+<title>Santo Antônio Estética Automotiva | Cravinhos, SP</title>
+<!-- v2 escura: pagina de teste; a principal e o index.html -->
+<meta name="description" content="Lavagem simples e completa, higienização de bancos e carpetes, lavagem de motor, polimento e cristalização no Centro de Cravinhos. Leva e traz. Rua Bernardino de Campos, 94.">
+<!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%231E2128%27%2F%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20font-family%3D%27Arial%27%20font-style%3D%27italic%27%20font-weight%3D%27700%27%20font-size%3D%2714%27%20fill%3D%27%23FDDC05%27%20text-anchor%3D%27middle%27%3ESA%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600..800&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoWash",
+  "name": "Santo Antônio Estética Automotiva",
+  "telephone": "+55-16-99239-9066",
+  "address": { "@type": "PostalAddress", "streetAddress": "Rua Bernardino de Campos, 94 - Centro", "addressLocality": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": -21.3397606, "longitude": -47.7351538 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:30", "closes": "13:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "49" }
+}
+</script>
+<style>
+  /* ============================================================
+     IDENTIDADE - o que se repete nas pecas que ele ja tem:
+     grafite + amarelo (placa da fachada e arte nova do Google),
+     letra pesada e inclinada no nome. Saira: uma familia so,
+     com eixo de largura (titulos condensados, texto normal).
+     Amarelo so como FUNDO (botao, faixa): no branco ele some.
+     ============================================================ */
+  :root {
+    color-scheme: dark;
+    --branco:   #FFFFFF;
+    --nevoa:    #FFF9DE;   /* amarelo da marca bem diluido */
+    --linha:    #E9E4CF;
+    --linha-forte: #878A91;/* contorno de controle: 3.5:1 no branco */
+    --tinta:    #1E2128;   /* grafite medido na arte do Google: 16:1 no branco */
+    --tinta-2:  #50555F;   /* 7.4:1 no branco, 7:1 na nevoa */
+    --grafite:  #1E2128;
+    --grafite-2:#2B2F37;
+    --cinza-claro: #C9CDD4;/* texto secundario no grafite: 10:1 */
+    --amarelo:  #FDDC05;   /* medido na arte: 12.6:1 com o grafite */
+    --amarelo-forte: #EDC900;
+    --preencher: #FFF0A6;
+    --preencher-borda: #8A6D00;
+    --raio:     12px;
+
+    --fonte: "Saira", "Saira reserva", Arial, sans-serif;
+    --fonte-titulo: "Saira", "Saira titulo reserva", Arial, sans-serif;   /* so nos titulos condensados */
+    --largura: 75rem;   /* 1200px com a fonte padrao; cresce junto se a pessoa aumenta a letra */
+    --margem: clamp(16px, 4vw, 40px);
+  }
+  /* reservas medidas com canvas: texto Saira = Arial x 1,024; titulo (italico 750, largura 78%) = Arial negrito italico x 0,859 */
+  @font-face { font-family: "Saira reserva"; src: local("Arial"); size-adjust: 102.4%; }
+  @font-face { font-family: "Saira titulo reserva"; src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"), local("Arial"); font-weight: 600 900; size-adjust: 85.9%; }
+
+  /* ---------- base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  /* fundo da janela no grafite do rodape: o que sobrar abaixo do fim (elastico da rolagem) emenda no rodape */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: #1E2128; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.125rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  img { max-width: 100%; height: auto; display: block; }
+  figure { margin: 0; }
+  a { color: var(--tinta); text-underline-offset: .18em; }
+  a, button, input, select, label { touch-action: manipulation; }
+  :focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  h1, h2, h3 { margin: 0; line-height: 1.05; text-wrap: balance; overflow-wrap: break-word; }
+  /* titulos: Saira condensada e inclinada, como o nome no letreiro */
+  h1, h2 { font-weight: 750; font-family: var(--fonte-titulo); letter-spacing: -.005em; }
+  h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.3rem); }
+  h3 { font-size: 1.3rem; font-weight: 650; line-height: 1.2; }
+  p { margin: 0; }
+  p, li, label, dd, dt, small, legend, figcaption, .btn { overflow-wrap: anywhere; }
+  .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
+  .a-preencher { background: var(--preencher); box-shadow: inset 0 -2px 0 var(--preencher-borda); padding: 0 .25em; color: var(--tinta); font-style: normal; }
+  .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pular { position: absolute; left: 1rem; top: -5rem; z-index: 50; padding: .8rem 1rem; background: var(--branco); color: var(--tinta); }
+  .pular:focus { top: 1rem; }
+
+  /* botoes */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; max-width: 100%;
+    min-height: 54px; padding: .75rem 1.4rem; border: 0; border-radius: 10px;
+    background: var(--amarelo); color: var(--grafite); font: 650 1.05rem/1.2 var(--fonte); text-decoration: none; text-align: center; cursor: pointer;
+    transition: background-color .2s, transform .2s, box-shadow .2s;
+  }
+  .btn:hover { background: var(--amarelo-forte); }
+  .btn:active { transform: translateY(1px); }
+  .btn svg { width: 1.3em; height: 1.3em; flex: none; }
+  .btn-grafite { background: var(--grafite); color: #fff; }
+  .btn-grafite:hover { background: var(--grafite-2); }
+  .btn-vidro { background: rgba(255, 255, 255, .06); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .72); }
+  .btn-vidro:hover { background: rgba(255, 255, 255, .14); }
+  .btn-linha { background: var(--branco); color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .btn-linha:hover { box-shadow: inset 0 0 0 1.5px var(--tinta); }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:active { transform: none; } }
+
+  /* ---------- topo ---------- */
+  .topo { position: relative; z-index: 20; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .topo-grade { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .85rem; }
+  .marca { display: grid; min-width: 0; min-height: 44px; align-content: center; text-decoration: none; color: var(--tinta); line-height: 1; }
+  .marca strong { font-size: clamp(1.75rem, 1.4rem + 1.1vw, 2.35rem); font-weight: 800; font-family: var(--fonte-titulo); letter-spacing: .005em; }
+  .marca span { margin-top: .25rem; font-size: clamp(.85rem, .78rem + .25vw, 1rem); font-weight: 550; color: var(--tinta-2); letter-spacing: .01em; }
+  .menu { display: flex; flex-wrap: wrap; gap: .25rem 1.6rem; align-items: center; }
+  .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; font-weight: 550; font-size: 1.02rem; }
+  .menu a:hover { text-decoration: underline; text-decoration-color: var(--amarelo-forte); text-decoration-thickness: 3px; }
+  .menu .menu-tel { display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .95rem; border-radius: 10px; background: var(--grafite); color: #fff; font-weight: 650; }
+  .menu .menu-tel:hover { background: var(--grafite-2); text-decoration: none; }
+  .menu .menu-tel svg { width: 1.1rem; height: 1.1rem; color: var(--amarelo); }
+  /* botao do menu: 3 barrinhas retas no grafite; viram X ao abrir.
+     o topo vira "compacto" quando o menu nao cabe numa linha (celular, tablet ou fonte grande): ver ajustarMenu() */
+  .menu-botao { display: none; }
+  .topo.compacto .topo-grade { flex-wrap: nowrap; }
+  .topo.compacto .menu-botao {
+    display: grid; align-content: center; justify-items: center; gap: 5px; flex: none; width: 52px; height: 52px; margin-right: -8px; padding: 0;
+    border: 0; border-radius: var(--raio); background: none; cursor: pointer;
+  }
+  .topo.compacto .menu-botao span { display: block; width: 28px; height: 4px; border-radius: 4px; background: var(--grafite); transition: transform .25s cubic-bezier(.2, .7, .2, 1), opacity .2s; }
+  .topo.compacto.menu-aberto .menu-botao span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .topo.compacto.menu-aberto .menu-botao span:nth-child(2) { opacity: 0; }
+  .topo.compacto.menu-aberto .menu-botao span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  .topo.compacto .menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    grid-template-columns: minmax(0, 1fr); gap: 0; padding: .5rem var(--margem) 1.25rem;
+    background: var(--branco); border-bottom: 1px solid var(--linha); box-shadow: 0 18px 30px -22px rgba(30, 33, 40, .6);
+  }
+  .topo.compacto.menu-aberto .menu { display: grid; }
+  .topo.compacto .menu a { display: flex; align-items: center; min-height: 52px; padding: .5rem 0; border-bottom: 1px solid var(--linha); font-size: 1.15rem; }
+  .topo.compacto .menu a:hover { text-decoration: none; }
+  .topo.compacto .menu .menu-tel { justify-content: center; min-height: 52px; margin-top: .9rem; border-bottom: 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .topo.compacto.menu-aberto .menu { animation: menu-desce .22s cubic-bezier(.2, .7, .2, 1); }
+  }
+  @keyframes menu-desce { from { opacity: 0; transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) { .topo.compacto .menu-botao span { transition: none; } }
+
+  /* ---------- abertura: a Amarok no patio deles ocupa tudo ---------- */
+  .abertura { position: relative; isolation: isolate; display: grid; min-height: clamp(560px, 84vh, 820px); overflow: hidden; color: #fff; background: var(--grafite); }
+  .abertura-fundo { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 62% 58%; }
+  .abertura::before { content: ""; position: absolute; inset: 0; z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(30, 33, 40, .97) 0%, rgba(30, 33, 40, .92) 36%, rgba(30, 33, 40, .5) 62%, rgba(30, 33, 40, 0) 84%),
+      linear-gradient(0deg, rgba(30, 33, 40, .55) 0%, rgba(30, 33, 40, 0) 35%); }
+  .abertura-conteudo { align-self: center; display: grid; grid-template-columns: minmax(0, 42rem); gap: 1.4rem; width: 100%; padding-block: clamp(3rem, 8vw, 5.5rem); }
+  .abertura h1 { font-size: clamp(3rem, 1.6rem + 4.4vw, 5.4rem); line-height: .96; }
+  .abertura-conteudo > p:not(.nota) { font-size: clamp(1.15rem, 1rem + .45vw, 1.32rem); line-height: 1.5; color: #E4E6EA; max-width: 36rem; }
+  /* os servicos principais, com check amarelo */
+  .abertura-lista { display: flex; flex-wrap: wrap; gap: .6rem 1.75rem; margin: -.2rem 0 .3rem; padding: 0; list-style: none; font-size: clamp(1rem, .95rem + .2vw, 1.08rem); font-weight: 600; }
+  .abertura-lista li { display: inline-flex; align-items: center; gap: .55rem; min-width: 0; }
+  .abertura-lista svg { flex: none; width: 1.35rem; height: 1.35rem; padding: .2rem; border-radius: 50%; background: var(--amarelo); color: var(--grafite); }
+  .abertura-acoes { display: flex; flex-wrap: wrap; gap: .85rem; }
+  .abertura-acoes .btn { min-height: 56px; padding: .8rem 1.55rem; font-size: 1.08rem; }
+  .nota { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .7rem; font-weight: 550; }
+  .estrelas { display: inline-flex; gap: 2px; color: var(--amarelo); }
+  .estrelas svg { width: 1.1rem; height: 1.1rem; }
+  .nota a { color: #fff; }
+  .nota-leva { gap: .75rem; font-size: 1.08rem; font-weight: 500; color: #E4E6EA; }
+  .nota-leva strong { color: #fff; font-weight: 700; }
+  .nota-leva .leva-setas { flex: none; width: 2.6rem; height: 1.9rem; color: var(--amarelo); }
+  @media (max-width: 760px) {
+    /* celular: a foto em cima, inteira; o texto embaixo, no grafite */
+    .abertura { min-height: 0; }
+    .abertura-fundo { position: static; height: auto; aspect-ratio: 4 / 3; object-position: 30% 60%; }
+    .abertura::before { display: none; }
+    .abertura-conteudo { padding-block: 1.75rem 2.5rem; }
+  }
+
+  /* ---------- faixa amarela: 4 blocos (leva e traz, horario, endereco, WhatsApp) ---------- */
+  .faixa { background: var(--amarelo); color: var(--grafite); }
+  .faixa-grade { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; padding-block: clamp(1.25rem, 2.5vw, 1.9rem); }
+  .faixa-item { display: flex; align-items: center; gap: .85rem; min-width: 0; padding-inline: clamp(.75rem, 1.2vw, 1rem); color: inherit; text-decoration: none; }
+  .faixa-item:first-child { padding-left: 0; }
+  .faixa-item + .faixa-item { border-left: 1.5px solid rgba(30, 33, 40, .22); }
+  .faixa-item svg { flex: none; width: 2.4rem; height: 2.4rem; }
+  .faixa-nota svg { width: 2.5rem; height: 2.5rem; }
+  .faixa-item p { display: grid; min-width: 0; line-height: 1.3; }
+  .faixa-item strong { font-size: 1.35rem; font-weight: 800; font-family: var(--fonte-titulo); line-height: 1.15; }
+  .faixa-item span { font-weight: 500; font-size: 1rem; }
+  .faixa-item strong span { font: inherit; }
+  a.faixa-item:hover strong { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
+  .faixa-agora strong { display: inline-flex; align-items: center; gap: .5rem; }
+  .faixa-agora i { width: .7rem; height: .7rem; border-radius: 50%; background: #13703A; flex: none; box-shadow: 0 0 0 3px rgba(19, 112, 58, .18); }
+  .faixa-agora.fechado i { background: #A3261E; box-shadow: 0 0 0 3px rgba(163, 38, 30, .16); }
+  @media (max-width: 1199px) {
+    .faixa-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.1rem; }
+    .faixa-item:nth-child(3) { padding-left: 0; border-left: 0; }
+  }
+  /* celular: endereco e WhatsApp ja estao logo abaixo; fica o leva e traz e o horario */
+  @media (max-width: 640px) {
+    .faixa-grade { grid-template-columns: minmax(0, 1fr); }
+    .faixa-item { padding-left: 0; }
+    .faixa-item + .faixa-item { border-left: 0; border-top: 1.5px solid rgba(30, 33, 40, .22); padding-top: 1.1rem; }
+    .faixa-item:nth-child(n+3) { display: none; }
+  }
+
+  /* ---------- secoes ---------- */
+  .secao { padding-block: clamp(3.25rem, 7vw, 5.5rem); }
+  .secao-nevoa { background: var(--nevoa); }
+  .cabeca { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; max-width: 46rem; margin-bottom: 2.25rem; }
+  .cabeca p { color: var(--tinta-2); font-size: 1.12rem; }
+  @media (min-width: 821px) {
+    .cabeca-lado { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(1.75rem, 5vw, 4.5rem); align-items: end; max-width: none; }
+    .cabeca-lado p { padding-bottom: .4rem; }
+  }
+  .ressalva { font-size: .95rem; color: var(--tinta-2); }
+
+  /* ---------- antes e depois: a peca da casa ----------
+     duas fotos empilhadas; a de depois e recortada pela posicao da barra.
+     arrastar com o dedo ou o mouse; no teclado, um range escondido. */
+  .ad-grade { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+  .ad-palco { display: grid; justify-items: start; min-width: 0; }
+  .comparador {
+    --pos: 50%;
+    position: relative; width: min(100%, calc(70svh * var(--prop, 1.333))); aspect-ratio: var(--prop, 1.333);
+    overflow: hidden; border-radius: var(--raio); background: var(--grafite); cursor: ew-resize; touch-action: pan-y;
+    user-select: none; -webkit-user-select: none;
+  }
+  .comparador img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+  .comparador .ad-depois { clip-path: inset(0 0 0 var(--pos)); }
+  .ad-rotulo { position: absolute; top: .85rem; z-index: 2; padding: .3rem .7rem; border-radius: 8px; background: rgba(30, 33, 40, .82); color: #fff; font-size: .95rem; font-weight: 600; line-height: 1.3; pointer-events: none; transition: opacity .2s; }
+  .ad-rotulo-antes { left: .85rem; }
+  .ad-rotulo-depois { right: .85rem; background: var(--amarelo); color: var(--grafite); }
+  .comparador.perto-esquerda .ad-rotulo-antes, .comparador.perto-direita .ad-rotulo-depois { opacity: 0; }
+  .ad-barra { position: absolute; top: 0; bottom: 0; left: var(--pos); z-index: 3; width: 4px; margin-left: -2px; background: var(--amarelo); box-shadow: 0 0 0 1px rgba(30, 33, 40, .25); pointer-events: none; }
+  .ad-pegador {
+    position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 52px; height: 52px; margin: -26px 0 0 -26px;
+    border-radius: 50%; background: var(--amarelo); color: var(--grafite); box-shadow: 0 6px 18px -6px rgba(0, 0, 0, .55);
+  }
+  .ad-pegador svg { width: 30px; height: 30px; }
+  .comparador:has(input:focus-visible) .ad-pegador { outline: 3px solid #fff; outline-offset: 3px; box-shadow: 0 0 0 6px var(--grafite); }
+  .comparador input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+  .comparador.mostrando .ad-depois { transition: clip-path .9s cubic-bezier(.45, 0, .2, 1); }
+  .comparador.mostrando .ad-barra { transition: left .9s cubic-bezier(.45, 0, .2, 1); }
+  .ad-legenda { width: min(100%, calc(70svh * var(--prop, 1.333))); margin-top: .75rem; color: var(--tinta-2); font-size: 1rem; }
+  /* lista de trabalhos */
+  .ad-lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; margin: 0; padding: 0; list-style: none; }
+  .ad-item {
+    display: grid; grid-template-columns: 4.4rem minmax(0, 1fr); gap: 1rem; align-items: center; width: 100%; min-height: 64px; padding: .55rem;
+    border: 0; border-radius: var(--raio); background: none; color: var(--tinta); font: inherit; text-align: left; cursor: pointer; transition: background-color .2s;
+  }
+  .ad-item:hover { background: var(--nevoa); }
+  .ad-item img { width: 4.4rem; height: 4.4rem; border-radius: 9px; object-fit: cover; }
+  .ad-item span { display: grid; gap: .1rem; min-width: 0; line-height: 1.3; }
+  .ad-item strong { font-size: 1.08rem; font-weight: 650; }
+  .ad-item small { font-size: .95rem; color: var(--tinta-2); }
+  .ad-item[aria-pressed="true"] { background: var(--grafite); color: #fff; }
+  .ad-item[aria-pressed="true"] small { color: var(--cinza-claro); }
+  .ad-item[aria-pressed="true"] img { box-shadow: 0 0 0 3px var(--amarelo); }
+  .ad-item:focus-visible { outline-offset: 2px; }
+  .ad-dica { margin-top: 1rem; padding-left: .55rem; color: var(--tinta-2); font-size: .98rem; }
+  @media (prefers-reduced-motion: reduce) { .ad-item, .ad-rotulo { transition: none; } }
+  @media (max-width: 900px) {
+    .ad-grade { grid-template-columns: minmax(0, 1fr); }
+    .comparador, .ad-legenda { width: 100%; }
+    .comparador { max-height: none; }
+    .ad-lista { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+  }
+
+  /* ---------- servicos: foto do brilho | listas por grupo ---------- */
+  .serv-grade { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); gap: clamp(1.75rem, 5vw, 4rem); align-items: start; }
+  .serv-foto { position: sticky; top: 1.5rem; display: grid; gap: .5rem; }
+  .serv-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 42% 50%; border-radius: var(--raio); }
+  .serv-foto figcaption { font-size: .95rem; color: var(--tinta-2); }
+  .serv-grupos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem clamp(1.5rem, 4vw, 3rem); }
+  .serv-grupo h3 { padding-bottom: .6rem; border-bottom: 3px solid var(--grafite); font-size: 1.45rem; font-weight: 750; font-family: var(--fonte-titulo); }
+  .serv-grupo ul { margin: 0; padding: 0; list-style: none; }
+  .serv-grupo li { display: grid; grid-template-columns: .55rem minmax(0, 1fr); gap: .75rem; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--linha); }
+  .serv-grupo li::before { content: ""; width: .55rem; height: .55rem; border-radius: 2px; background: var(--amarelo-forte); transform: translateY(-.1rem) skewX(-12deg); }
+  .serv-nota { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.5rem; padding-top: .25rem; }
+  .serv-nota p { flex: 1 1 18rem; color: var(--tinta-2); }
+  @media (max-width: 900px) {
+    .serv-grade { grid-template-columns: minmax(0, 1fr); }
+    .serv-foto { position: static; }
+    .serv-foto img { aspect-ratio: 16 / 10; }
+  }
+  @media (max-width: 600px) { .serv-grupos { grid-template-columns: minmax(0, 1fr); } }
+
+  /* ---------- sairam daqui: tira de fotos que rola de lado ---------- */
+  .galeria { margin-top: clamp(3rem, 7vw, 5rem); }
+  .galeria-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 2rem; margin-bottom: 1.25rem; }
+  .galeria-topo h3 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); font-weight: 750; font-family: var(--fonte-titulo); }
+  .galeria-setas { display: flex; gap: .5rem; }
+  .galeria-seta { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: var(--grafite); color: #fff; cursor: pointer; transition: background-color .2s, opacity .2s; }
+  .galeria-seta:hover { background: var(--grafite-2); }
+  .galeria-seta:disabled { opacity: .35; cursor: default; }
+  .galeria-seta svg { width: 22px; height: 22px; }
+  .galeria-tira {
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(16rem, 30%); gap: 1rem;
+    margin: 0; padding: 0 0 .75rem; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; overscroll-behavior-x: contain;
+  }
+  .galeria-tira li { position: relative; scroll-snap-align: start; min-width: 0; }
+  .galeria-tira figure { display: grid; gap: .5rem; }
+  .galeria-tira figcaption { font-size: .98rem; font-weight: 550; }
+  .galeria-ampliar { display: block; width: 100%; padding: 0; border: 0; border-radius: var(--raio); background: var(--grafite); cursor: zoom-in; overflow: hidden; }
+  .galeria-ampliar img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .45s cubic-bezier(.2, .7, .2, 1); }
+  .galeria-ampliar:hover img { transform: scale(1.03); }
+  @media (max-width: 600px) { .galeria-tira { grid-auto-columns: 82%; } }
+  @media (prefers-reduced-motion: reduce) { .galeria-ampliar img, .galeria-seta { transition: none; } .galeria-ampliar:hover img { transform: none; } }
+
+  /* visor: abre com a foto subindo e o fundo escurecendo; fecha no caminho inverso */
+  .visor { width: min(100% - 24px, 1240px); max-width: none; max-height: none; margin: auto; padding: 0; border: 0; background: none; color: #fff; overflow: visible; }
+  .visor::backdrop { background: rgba(20, 22, 27, .92); }
+  .visor-corpo, .visor-corpo figure { position: relative; display: grid; justify-items: center; gap: .75rem; margin: 0; }
+  .visor-corpo img { width: auto; max-width: 100%; max-height: calc(100dvh - 9rem); border-radius: var(--raio); object-fit: contain; }
+  .visor-corpo img.trocando { animation: visor-troca .3s ease; }
+  .visor-corpo figcaption { font-size: 1rem; color: var(--cinza-claro); text-align: center; }
+  .visor-botao { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .14); color: #fff; cursor: pointer; transition: background-color .2s; }
+  .visor-botao:hover { background: rgba(255, 255, 255, .26); }
+  .visor-botao:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+  .visor-botao svg { width: 24px; height: 24px; }
+  .visor-fechar { position: fixed; top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); }
+  .visor-navegacao { display: flex; align-items: center; gap: 1rem; font-size: .95rem; color: var(--cinza-claro); }
+  @media (prefers-reduced-motion: no-preference) {
+    .visor[open] { animation: visor-entra .38s cubic-bezier(.2, .7, .2, 1); }
+    .visor[open]::backdrop { animation: visor-fundo-entra .38s ease; }
+    .visor.saindo { animation: visor-sai .24s ease-in forwards; }
+    .visor.saindo::backdrop { animation: visor-fundo-sai .24s ease-in forwards; }
+  }
+  @keyframes visor-entra { from { opacity: 0; transform: translateY(18px) scale(.97); } }
+  @keyframes visor-fundo-entra { from { opacity: 0; } }
+  @keyframes visor-sai { to { opacity: 0; transform: translateY(12px) scale(.98); } }
+  @keyframes visor-fundo-sai { to { opacity: 0; } }
+  @keyframes visor-troca { from { opacity: .2; } }
+
+  /* ---------- monte o seu pedido: escolhas a esquerda, a mensagem pronta a direita ---------- */
+  .ped-grade { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: stretch; }
+  .ped-passos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; margin: 0; padding: 0; list-style: none; counter-reset: passo; }
+  .ped-passos > li { position: relative; counter-increment: passo; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 1rem; }
+  /* linha ligando os passos */
+  .ped-passos > li:not(:last-child)::after { content: ""; position: absolute; left: calc(1.2rem - 1px); top: 2.9rem; bottom: -1.6rem; width: 2px; border-radius: 2px; background: var(--linha); }
+  .ped-passos > li.feito::before { box-shadow: 0 0 0 4px rgba(253, 220, 5, .3); }
+  .ped-passos > li::before { content: counter(passo); display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--amarelo); color: var(--grafite); font: 800 1.3rem/1 var(--fonte); font-family: var(--fonte-titulo); }
+  .ped-passos fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+  .ped-passos legend { display: grid; padding: .3rem 0 0; margin-bottom: .85rem; font-size: 1.3rem; font-weight: 650; line-height: 1.25; }
+  .ped-passos legend small { font-size: .95rem; font-weight: 400; color: var(--tinta-2); }
+  .ped-opcoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr)); gap: .5rem; }
+  .ped-opcoes-largas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+  .ped-opcao { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .1rem .6rem; min-height: 56px; padding: .6rem .9rem; border-radius: 10px; background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); cursor: pointer; transition: background-color .2s, box-shadow .2s, color .2s; }
+  .ped-opcao:hover { box-shadow: inset 0 0 0 1.5px var(--tinta); }
+  .ped-opcao input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .ped-opcao strong { font-weight: 600; line-height: 1.25; }
+  .ped-opcao small { grid-column: 1; font-size: .9rem; color: var(--tinta-2); line-height: 1.3; }
+  .ped-opcao::after { content: ""; grid-column: 2; grid-row: 1 / span 2; width: 1.3rem; height: 1.3rem; border-radius: 6px; box-shadow: inset 0 0 0 1.5px var(--linha-forte); background: center / 72% no-repeat; }
+  .ped-opcao:not(:has(small))::after { grid-row: 1; }
+  .ped-opcao:has(input[type="radio"])::after { border-radius: 50%; }
+  .ped-opcao:has(input:checked) { background: var(--grafite); color: #fff; box-shadow: none; }
+  .ped-opcao:has(input:checked) small { color: var(--cinza-claro); }
+  .ped-opcao:has(input:checked)::after { box-shadow: none; background-color: var(--amarelo);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%231E2128' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .ped-opcao:has(input:focus-visible) { outline: 3px solid var(--tinta); outline-offset: 2px; }
+  .ped-campo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; max-width: 26rem; margin-top: .9rem; font-weight: 550; }
+  .ped-campo[hidden] { display: none; }
+  .ped-campo small { font-weight: 400; color: var(--tinta-2); }
+  .ped-campo input { width: 100%; min-width: 0; min-height: 50px; padding: .6rem .85rem; border: 0; border-radius: 10px; box-shadow: inset 0 0 0 1.5px var(--linha-forte); font: 400 1.05rem var(--fonte); color: var(--tinta); background: var(--branco); }
+  .ped-campo input:focus-visible { outline: 3px solid var(--tinta); outline-offset: 1px; }
+  @media (prefers-reduced-motion: reduce) { .ped-opcao { transition: none; } }
+  /* a mensagem pronta, como aparece no WhatsApp */
+  .ped-painel { min-width: 0; padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: 16px; background: var(--grafite); color: #fff; }
+  .ped-painel :focus-visible { outline-color: var(--amarelo); }
+  .ped-envio { position: sticky; top: 1.5rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+  .ped-envio h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem); font-weight: 750; font-family: var(--fonte-titulo); }
+  .ped-progresso { display: grid; gap: .5rem; color: var(--cinza-claro); font-size: .98rem; }
+  .ped-progresso ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .35rem; margin: 0; padding: 0; list-style: none; }
+  .ped-progresso li { height: 6px; border-radius: 6px; background: rgba(255, 255, 255, .16); transition: background-color .25s; }
+  .ped-progresso li.feito { background: var(--amarelo); }
+  @media (prefers-reduced-motion: reduce) { .ped-progresso li { transition: none; } }
+  .ped-envio > p { color: var(--cinza-claro); font-size: 1rem; }
+  .ped-depois { display: grid; gap: .75rem; margin: .4rem 0 0; padding: 1.25rem 0 0; border-top: 1px solid rgba(255, 255, 255, .14); list-style: none; counter-reset: depois; }
+  .ped-depois li { counter-increment: depois; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .7rem; align-items: baseline; color: var(--cinza-claro); }
+  .ped-depois li::before { content: counter(depois); font: 800 1.25rem/1 var(--fonte); font-family: var(--fonte-titulo); color: var(--amarelo); }
+  .ped-depois strong { color: #fff; font-weight: 600; }
+  .conversa { overflow: hidden; border-radius: var(--raio); color: var(--tinta); }
+  .conversa-topo { display: flex; align-items: center; gap: .75rem; padding: .7rem 1rem; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .conversa-selo { display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--grafite); color: var(--amarelo); font: 800 1rem/1 var(--fonte); font-family: var(--fonte-titulo); }
+  .conversa-topo p { display: grid; min-width: 0; line-height: 1.25; }
+  .conversa-topo strong { font-size: 1rem; font-weight: 600; }
+  .conversa-topo small { font-size: .9rem; color: var(--tinta-2); }
+  .conversa-corpo { display: grid; justify-items: end; align-content: start; min-height: 10rem; padding: 1rem 1rem 1.2rem 2rem; background: #EFEAE2; }   /* fundo da conversa do WhatsApp */
+  .balao { position: relative; max-width: 100%; padding: .7rem .9rem; border-radius: 10px 0 10px 10px; background: #D9FDD3; color: #111B21; font-size: 1rem; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; box-shadow: 0 1px .5px rgba(11, 20, 26, .13); }
+  .balao::after { content: ""; position: absolute; top: 0; right: -8px; border-top: 10px solid #D9FDD3; border-right: 8px solid transparent; }
+  .balao.trocou { animation: balao-pulsa .3s ease; }
+  @keyframes balao-pulsa { from { opacity: .55; } }
+  @media (prefers-reduced-motion: reduce) { .balao.trocou { animation: none; } }
+  .ped-enviar { justify-self: start; }
+  @media (max-width: 900px) {
+    .ped-grade { grid-template-columns: minmax(0, 1fr); }
+    .ped-envio { position: static; }
+    .ped-passos > li:not(:last-child)::after { bottom: -1.6rem; }
+  }
+  @media (max-width: 480px) { .ped-passos > li { grid-template-columns: minmax(0, 1fr); gap: .5rem; } .ped-passos > li:not(:last-child)::after { display: none; } }
+
+  /* ---------- avaliacoes: faixa grafite ---------- */
+  .avaliacoes { background: var(--grafite); color: #fff; }
+  .avaliacoes :focus-visible { outline-color: var(--amarelo); }
+  .aval-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1.25rem 3rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .aval-nota { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.25rem; }
+  .aval-nota b { font: 800 clamp(3.4rem, 2.6rem + 3vw, 4.8rem)/.9 var(--fonte); font-family: var(--fonte-titulo); color: var(--amarelo); }
+  .aval-nota > span { display: grid; gap: .3rem; color: var(--cinza-claro); }
+  .aval-nota .estrelas { color: var(--amarelo); }
+  .aval-nota .estrelas svg { width: 1.3rem; height: 1.3rem; }
+  .aval-lista { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem clamp(1.5rem, 4vw, 3rem); margin: 0; padding: 0; list-style: none; }
+  .aval-lista li { display: grid; align-content: start; gap: 1rem; padding-top: 1.25rem; border-top: 3px solid var(--amarelo); }
+  .aval-lista blockquote { margin: 0; font-size: 1.12rem; line-height: 1.55; }
+  .aval-lista p { color: var(--cinza-claro); font-size: .98rem; }
+  .aval-lista strong { color: #fff; font-weight: 600; }
+  .aval-link { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; text-decoration-color: var(--amarelo); text-decoration-thickness: 2px; }
+  .aval-mais { margin-top: 1.75rem; }
+  @media (max-width: 900px) { .aval-lista { grid-template-columns: minmax(0, 1fr); } }
+
+  /* ---------- onde estamos ---------- */
+  .contato-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(1.75rem, 5vw, 3.5rem); }
+  .contato-dados { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-content: start; }
+  .contato-dados h2 { margin-bottom: .2rem; }
+  .contato-dados h3 { margin-bottom: .3rem; }
+  .tel-grande { font: 800 clamp(2rem, 1.5rem + 2vw, 2.8rem)/1.1 var(--fonte); font-family: var(--fonte-titulo); color: var(--tinta); text-decoration: none; }
+  .tel-grande:hover { text-decoration: underline; text-decoration-color: var(--amarelo-forte); text-decoration-thickness: 4px; }
+  .contato-dados .tel-outro { margin-top: .3rem; color: var(--tinta-2); }
+  .link-mapa { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+  .horarios { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
+  .horarios div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; padding: .5rem 0; border-bottom: 1px solid var(--linha); }
+  .horarios div.hoje { margin-inline: -12px; padding-inline: 12px; border-bottom-color: transparent; border-radius: 10px; background: var(--grafite); color: #fff; font-weight: 600; }
+  .horarios div:has(+ .hoje) { border-bottom-color: transparent; }
+  .horario-titulo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; }
+  .horario-agora { display: inline-flex; align-items: center; gap: .45rem; font-size: .95rem; font-weight: 600; color: #13703A; }
+  .horario-agora::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: currentColor; }
+  .horario-agora.fechado { color: #A3261E; }
+  .horarios dd { margin: 0; font-variant-numeric: tabular-nums; }
+  /* o mapa do Google so carrega no clique: sem cookies de terceiros ao abrir a pagina */
+  .mapa {
+    scroll-margin-top: 1.5rem;
+    position: relative; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; width: 100%; height: 100%; min-height: 380px; padding: clamp(.75rem, 4vw, 1.25rem); overflow: hidden; border-radius: var(--raio);
+    background-color: #F4F1E4;
+    background-image:
+      linear-gradient(115deg, transparent 47%, #E6E1CC 47%, #E6E1CC 51%, transparent 51%),
+      repeating-linear-gradient(0deg, transparent 0 54px, #E6E1CC 54px 60px),
+      repeating-linear-gradient(90deg, transparent 0 84px, #E6E1CC 84px 90px);
+  }
+  .mapa-capa { display: grid; justify-items: center; gap: .85rem; max-width: 100%; min-width: 0; padding: clamp(1rem, 4vw, 1.4rem) clamp(.9rem, 4vw, 1.6rem); text-align: center; background: var(--branco); border-radius: var(--raio); box-shadow: 0 14px 34px -20px rgba(30, 33, 40, .5); }
+  .mapa-pino { width: 2.25rem; height: 2.25rem; fill: none; stroke: var(--tinta); stroke-width: 1.8; }
+  .mapa-endereco { display: grid; gap: .15rem; overflow-wrap: anywhere; }
+  .mapa-endereco strong { font-weight: 650; }
+  .mapa-endereco span { color: var(--tinta-2); }
+  .mapa-quadro { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  @media (max-width: 820px) { .contato-grade { grid-template-columns: minmax(0, 1fr); } .mapa { min-height: 280px; } }
+
+  /* ---------- rodape compacto ---------- */
+  /* respiro embaixo: a barra de tarefas do Windows e os gestos do celular nao cobrem o pe */
+  .rodape { background: var(--grafite); color: var(--cinza-claro); padding: 1.75rem 0 calc(4.5rem + env(safe-area-inset-bottom)); font-size: .95rem; }
+  .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 2.5rem; }
+  .rodape-grade > * { min-width: 0; max-width: 100%; }
+  .rodape .marca { color: #fff; }
+  .rodape .marca span { color: var(--cinza-claro); }
+  .rodape-dir { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.5rem; }
+  .rodape :focus-visible { outline-color: var(--amarelo); }
+  @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; } }
+
+  /* ---------- WhatsApp no canto (em qualquer tela; sem barra fixa no celular) ---------- */
+  .zap-flutuante {
+    display: grid; place-items: center; position: fixed; z-index: 40;
+    right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
+    width: 62px; height: 62px; border-radius: 50%; background: #179A48; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(23, 154, 72, .7), 0 2px 6px rgba(30, 33, 40, .2);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s, background-color .2s;
+  }
+  .zap-flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .zap-flutuante:hover { background: #12803B; }
+  .zap-flutuante svg { width: 32px; height: 32px; }
+  @media (max-width: 600px) { .zap-flutuante { width: 56px; height: 56px; } .zap-flutuante svg { width: 28px; height: 28px; } }
+  @media (prefers-reduced-motion: reduce) { .zap-flutuante { transition: none; transform: none; } }
+
+  /* foco no fundo escuro: amarelo */
+  .abertura :focus-visible { outline-color: var(--amarelo); }
+
+  /* =================== v2 escura =================== */
+  :root {
+    --fonte: "Inter", "Inter reserva", Arial, sans-serif;
+    --fonte-titulo: "Montserrat", "Montserrat reserva", Arial, sans-serif;
+    /* superficies escuras (os nomes antigos ficam, os valores mudam) */
+    --branco:   #111216;   /* fundo da pagina */
+    --nevoa:    #17191E;   /* secoes alternadas */
+    --cartao:   #1C1F25;
+    --linha:    rgba(255, 255, 255, .1);
+    --linha-forte: #7A7F89; /* contorno de controle: 3:1 ou mais no fundo e no cartao */
+    --tinta:    #F4F5F7;
+    --tinta-2:  #A8ADB7;   /* 8:1 no fundo */
+    --grafite:  #0B0C0F;
+    --grafite-2:#1C1F25;
+    --amarelo:  #F9CF1B;
+    --amarelo-forte: #F2B807;
+    --raio: 16px;
+  }
+  html { background: #0B0C0F; }
+  /* reservas medidas com canvas: Inter = Arial x 1,065; Montserrat 800 = Arial negrito x 1,078 */
+  @font-face { font-family: "Inter reserva"; src: local("Arial"); size-adjust: 106.5%; }
+  @font-face { font-family: "Montserrat reserva"; src: local("Arial Bold"), local("Arial-BoldMT"), local("Arial"); font-weight: 600 900; size-adjust: 107.8%; }
+  .a-preencher { color: #15161A; }
+  .ped-opcao { box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  body { color: var(--tinta); }
+  h1, h2 { font-weight: 800; letter-spacing: -.02em; }
+  h2 { font-size: clamp(1.9rem, 1.3rem + 2.2vw, 3rem); }
+  h3 { font-family: var(--fonte-titulo); font-weight: 700; letter-spacing: -.01em; }
+  :focus-visible { outline-color: var(--amarelo); }
+  a { color: var(--tinta); }
+  .marca strong { font-weight: 800; letter-spacing: -.03em; font-size: clamp(1.5rem, 1.25rem + .9vw, 2rem); }
+  .marca span { color: var(--amarelo); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 600; }
+
+  /* botoes: pilula amarela com brilho */
+  .btn { border-radius: 999px; background: linear-gradient(180deg, #FFDB3A, var(--amarelo-forte)); color: #15161A; font-family: var(--fonte-titulo); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .95rem;
+    box-shadow: 0 10px 30px -10px rgba(249, 207, 27, .55); }
+  .btn:hover { background: linear-gradient(180deg, #FFE45E, #F5C518); }
+  .btn-vidro, .btn-linha, .btn-grafite { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .75); }
+  .btn-vidro:hover, .btn-linha:hover, .btn-grafite:hover { background: rgba(255, 255, 255, .08); }
+
+  /* topo escuro */
+  .topo { background: rgba(17, 18, 22, .96); border-bottom-color: var(--linha); }
+  .menu a { color: var(--tinta); }
+  .menu a:hover { text-decoration-color: var(--amarelo); }
+  .menu .menu-tel { background: transparent; color: var(--amarelo); box-shadow: inset 0 0 0 1.5px var(--amarelo); border-radius: 999px; }
+  .menu .menu-tel:hover { background: rgba(249, 207, 27, .1); }
+  .menu .menu-tel svg { color: var(--amarelo); }
+  .topo.compacto .menu-botao span { background: var(--amarelo); }
+  .topo.compacto .menu { background: #15171C; box-shadow: 0 18px 30px -22px rgba(0, 0, 0, .9); }
+  .topo.compacto .menu .menu-tel { justify-content: center; }
+
+  /* abertura: Amarok bem escurecida, luz so do lado direito */
+  .abertura { background: #0B0C0F; min-height: clamp(600px, 90vh, 900px); }
+  .abertura-fundo { filter: brightness(.62) saturate(.85) contrast(1.08); object-position: 70% 55%; }
+  .abertura::before { background:
+      radial-gradient(ellipse 70% 80% at 72% 50%, rgba(11, 12, 15, 0) 0%, rgba(11, 12, 15, .55) 60%, rgba(11, 12, 15, .92) 100%),
+      linear-gradient(90deg, rgba(11, 12, 15, .96) 0%, rgba(11, 12, 15, .85) 34%, rgba(11, 12, 15, .2) 64%, rgba(11, 12, 15, 0) 100%); }
+  .abertura-conteudo { grid-template-columns: minmax(0, 44rem); gap: 1.6rem; }
+  .abertura h1 { display: grid; font-size: min(clamp(2.6rem, 1.3rem + 4.2vw, 5rem), 11.5vw);   /* 11.5vw: a palavra mais longa (CUIDADO.) cabe mesmo com letra grande */ line-height: 1; text-transform: uppercase; letter-spacing: -.025em; }
+  .h1-destaque { color: var(--amarelo); }
+  .abertura-conteudo > p:not(.nota) { color: #C9CDD4; font-size: clamp(1.05rem, .98rem + .3vw, 1.2rem); max-width: 36rem; }
+  .abertura-acoes .btn { min-height: 58px; padding: .8rem 1.7rem; font-size: .98rem; }
+  .abertura-icones { display: grid; grid-template-columns: repeat(4, minmax(0, auto)); justify-content: start; gap: 1rem 2.2rem; margin: .6rem 0 0; padding: 0; list-style: none; }
+  .abertura-icones li { display: flex; align-items: center; gap: .65rem; min-width: 0; font: 700 .78rem/1.35 var(--fonte-titulo); text-transform: uppercase; letter-spacing: .05em; color: #E9EBEF; }
+  .abertura-icones svg { flex: none; width: 1.9rem; height: 1.9rem; color: var(--amarelo); }
+  @media (max-width: 760px) {
+    .abertura-fundo { filter: brightness(.8) saturate(.9); }
+    .abertura-icones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  /* faixa: escura, icones amarelos */
+  .faixa { background: #15171C; color: var(--tinta); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+  .faixa-item svg { color: var(--amarelo); }
+  .faixa-item span { color: var(--tinta-2); }
+  .faixa-item + .faixa-item { border-left-color: var(--linha); }
+  .faixa-agora i { background: #4ADE80; box-shadow: 0 0 0 3px rgba(74, 222, 128, .2); }
+  .faixa-agora.fechado i { background: #FF8A80; box-shadow: 0 0 0 3px rgba(255, 138, 128, .2); }
+  @media (max-width: 640px) { .faixa-item + .faixa-item { border-top-color: var(--linha); } }
+
+  /* antes e depois */
+  .comparador { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .9); }
+  .ad-item:hover { background: var(--cartao); }
+  .ad-item[aria-pressed="true"] { background: var(--cartao); box-shadow: inset 0 0 0 1.5px var(--amarelo); color: var(--tinta); }
+  .ad-item[aria-pressed="true"] small { color: var(--tinta-2); }
+  .ad-rotulo { background: rgba(11, 12, 15, .82); }
+
+  /* servicos */
+  .serv-grupo h3 { border-bottom-color: var(--amarelo); }
+  .serv-grupo li::before { background: var(--amarelo); }
+
+  /* galeria */
+  .galeria-seta { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha); }
+  .galeria-seta:hover { background: #262A31; }
+
+  /* pedido: opcoes escuras, escolhida em amarelo; painel um tom acima */
+  .ped-opcao { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .ped-opcao:hover { box-shadow: inset 0 0 0 1.5px var(--tinta-2); }
+  .ped-opcao:has(input:checked) { background: var(--amarelo); color: #15161A; }
+  .ped-opcao:has(input:checked) small { color: #3A3420; }
+  .ped-opcao:has(input:checked)::after { background-color: #15161A;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%23F9CF1B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .ped-opcao:has(input:focus-visible) { outline-color: var(--amarelo); }
+  .ped-campo input { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .ped-passos > li:not(:last-child)::after { background: var(--linha); }
+  .ped-painel { background: var(--cartao); box-shadow: inset 0 0 0 1px var(--linha), inset 0 4px 0 var(--amarelo); }
+  .conversa-topo { background: #202C33; border-bottom-color: #2A3942; color: #E9EDEF; }   /* WhatsApp escuro */
+  .conversa-topo small { color: #8696A0; }
+  .conversa-selo { background: #0B0C0F; }
+  .conversa-corpo { background: #0B141A; }
+  .balao { background: #005C4B; color: #E9EDEF; }
+  .balao::after { border-top-color: #005C4B; }
+
+  /* avaliacoes: faixa amarela */
+  .avaliacoes { background: var(--amarelo); color: #15161A; }
+  .avaliacoes :focus-visible { outline-color: #15161A; }
+  .aval-nota b, .aval-nota .estrelas { color: #15161A; }
+  .aval-nota > span { color: #3A3420; }
+  .aval-lista li { border-top-color: #15161A; }
+  .aval-lista p { color: #3A3420; }
+  .aval-lista strong { color: #15161A; }
+  .aval-link { color: #15161A; text-decoration-color: #15161A; }
+
+  /* onde estamos */
+  .horarios div.hoje { background: var(--amarelo); color: #15161A; }
+  .horario-agora { color: #4ADE80; }
+  .horario-agora.fechado { color: #FF8A80; }
+  .mapa { background-color: #17191E; background-image:
+      linear-gradient(115deg, transparent 47%, #23262D 47%, #23262D 51%, transparent 51%),
+      repeating-linear-gradient(0deg, transparent 0 54px, #23262D 54px 60px),
+      repeating-linear-gradient(90deg, transparent 0 84px, #23262D 84px 90px); }
+  .mapa-capa { background: var(--cartao); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .9); }
+  .mapa-pino { stroke: var(--amarelo); }
+  .tel-grande { color: var(--tinta); }
+
+  /* rodape */
+  .rodape { background: #0B0C0F; border-top: 1px solid var(--linha); }
+  .rodape .marca span { color: var(--amarelo); }
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envoltorio topo-grade">
+    <a class="marca" href="#" translate="no"><strong>Santo Antônio</strong><span>Estética Automotiva</span></a>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#antes-depois">Antes e depois</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#onde">Onde estamos</a>
+      <a class="menu-tel" id="zap-topo" href="https://wa.me/5516992399066" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>(16) 99239-9066</a>
+    </nav>
+  </div>
+</header>
+
+<section class="abertura" aria-labelledby="titulo">
+  <img class="abertura-fundo" src="img/abertura-1280.webp" srcset="img/abertura-1280.webp 1280w, img/abertura-2400.webp 2400w" sizes="100vw" width="1280" height="960" fetchpriority="high" alt="Volkswagen Amarok cinza com rodas pretas, limpa e brilhando, no pátio da Santo Antônio">
+  <div class="envoltorio abertura-conteudo">
+    <h1 id="titulo"><span>Seu carro merece</span> <span class="h1-destaque">esse cuidado.</span></h1>
+    <p>Estética automotiva no Centro de Cravinhos: lavagem completa, higienização de bancos e carpetes, polimento e cristalização. Buscamos e devolvemos o seu carro.</p>
+    <div class="abertura-acoes">
+      <a class="btn" href="#orcamento"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5 5.3 16A8 8 0 1 1 8 18.7z"/></svg>Pedir orçamento</a>
+      <a class="btn btn-vidro" href="#antes-depois">Ver antes e depois</a>
+    </div>
+    <ul class="abertura-icones">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h15M14 4l4 4-4 4M21 16H6M10 12l-4 4 4 4"/></g></svg><span>Leva e traz<br>no Centro</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></svg><span>Desde 2016<br>em Cravinhos</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/><path d="M18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></g></svg><span>Da lavagem<br>ao polimento</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2"/><path d="M3.5 10.5h6.3M14.2 10.5h6.3M12 14.2V21"/></g></svg><span>Revestimento<br>de volante</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="faixa">
+  <div class="envoltorio faixa-grade">
+    <a class="faixa-item faixa-nota" href="https://www.google.com/maps/place/Santo+Ant%C3%B4nio+Est%C3%A9tica+Automotiva/@-21.3397606,-47.7351538,17z/data=!4m8!3m7!1s0x94b9c93fb84a79d9:0xdaf388b0cb5b3c23!8m2!3d-21.3397606!4d-47.7351538!9m1!1b1!16s%2Fg%2F11sr8wr6gx" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg>
+      <p><strong>5,0 no Google</strong><span>49 avaliações</span></p>
+    </a>
+    <div class="faixa-item faixa-agora" id="status">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></g></svg>
+      <p><strong><i></i><span></span></strong><span class="faixa-agora-sub"></span></p>
+    </div>
+    <a class="faixa-item" href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.3397606,-47.7351538" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></g></svg>
+      <p><strong>R. Bernardino de Campos, 94</strong><span>Centro, Cravinhos</span></p>
+    </a>
+    <a class="faixa-item" id="zap-faixa" href="https://wa.me/5516992399066" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      <p><strong>(16) 99239-9066</strong><span>Orçamento pelo WhatsApp</span></p>
+    </a>
+  </div>
+</div>
+
+<main id="conteudo">
+  <section class="secao" id="antes-depois" aria-labelledby="titulo-ad">
+    <div class="envoltorio">
+      <div class="cabeca cabeca-lado">
+        <h2 id="titulo-ad">Antes e depois</h2>
+        <p>Trabalhos feitos aqui, com fotos do nosso pátio. Arraste a barra amarela para comparar.</p>
+      </div>
+      <div class="ad-grade">
+        <figure class="ad-palco">
+          <div class="comparador" id="comparador">
+            <img class="ad-antes" id="ad-antes" src="img/picape-antes.webp" width="1080" height="810" alt="">
+            <img class="ad-depois" id="ad-depois" src="img/picape-depois.webp" width="1080" height="810" alt="">
+            <span class="ad-rotulo ad-rotulo-antes" aria-hidden="true">Antes</span>
+            <span class="ad-rotulo ad-rotulo-depois" aria-hidden="true">Depois</span>
+            <span class="ad-barra" aria-hidden="true"><span class="ad-pegador"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6 3 12l6 6M15 6l6 6-6 6"/></svg></span></span>
+            <input type="range" id="ad-range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+          </div>
+          <figcaption class="ad-legenda" id="ad-legenda"></figcaption>
+        </figure>
+        <div>
+          <ul class="ad-lista" id="ad-lista" aria-label="Escolha o trabalho"></ul>
+          <p class="ad-dica">As fotos são de clientes da loja, publicadas no nosso Instagram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-nevoa" id="servicos" aria-labelledby="titulo-servicos">
+    <div class="envoltorio">
+      <div class="cabeca cabeca-lado">
+        <h2 id="titulo-servicos">Serviços</h2>
+        <p>Da lavagem do dia a dia ao polimento. O valor depende do tamanho e do estado do veículo: peça o orçamento pelo WhatsApp.</p>
+      </div>
+      <div class="serv-grade">
+        <figure class="serv-foto">
+          <img src="img/camaro.webp" width="900" height="675" loading="lazy" alt="Chevrolet Camaro preto, limpo e brilhando, no pátio da loja, com a faixa da Santo Antônio ao fundo">
+          <figcaption>Chevrolet Camaro no nosso pátio.</figcaption>
+        </figure>
+        <div class="serv-grupos">
+          <div class="serv-grupo">
+            <h3>Lavagem</h3>
+            <ul>
+              <li>Lavagem simples</li>
+              <li>Lavagem completa</li>
+              <li>Lavagem do motor</li>
+              <li>Limpeza de rodas e pneus</li>
+            </ul>
+          </div>
+          <div class="serv-grupo">
+            <h3>Interior</h3>
+            <ul>
+              <li>Aspiração interna</li>
+              <li>Lavagem de bancos e carpetes</li>
+              <li>Limpeza de couro e camurça</li>
+              <li>Limpeza dos vidros</li>
+            </ul>
+          </div>
+          <div class="serv-grupo">
+            <h3>Pintura</h3>
+            <ul>
+              <li>Polimento</li>
+              <li>Cristalização</li>
+              <li>Proteção da pintura</li>
+            </ul>
+          </div>
+          <div class="serv-grupo">
+            <h3>Também fazemos</h3>
+            <ul>
+              <li>Revestimento de volante</li>
+              <li><span>Acessórios para veículos: <span class="a-preencher">quais?</span></span></li>
+              <li>Leva e traz</li>
+            </ul>
+          </div>
+          <div class="serv-nota">
+            <p>Não encontrou o que precisa? Envie uma foto do carro pelo WhatsApp e respondemos.</p>
+            <a class="btn btn-grafite" href="#orcamento">Montar o pedido</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="galeria" role="region" aria-labelledby="titulo-galeria">
+        <div class="galeria-topo">
+          <h3 id="titulo-galeria">Saíram daqui</h3>
+          <div class="galeria-setas">
+            <button class="galeria-seta" type="button" id="galeria-anterior" aria-label="Fotos anteriores" aria-controls="galeria-tira"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="galeria-seta" type="button" id="galeria-proxima" aria-label="Próximas fotos" aria-controls="galeria-tira"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <ul class="galeria-tira" id="galeria-tira" tabindex="0" aria-label="Carros que saíram da loja">
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: BMW Z4"><img src="img/z4.webp" width="900" height="675" loading="lazy" alt="BMW Z4 preta, limpa, no pátio da loja"></button><figcaption>BMW Z4</figcaption></figure></li>
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: Volkswagen Amarok"><img src="img/abertura-1280.webp" width="1280" height="960" loading="lazy" alt="Volkswagen Amarok cinza com rodas pretas, no pátio da loja"></button><figcaption>Volkswagen Amarok</figcaption></figure></li>
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: Audi"><img src="img/audi.webp" width="900" height="675" loading="lazy" alt="Audi preto, limpo, no pátio da loja"></button><figcaption>Audi</figcaption></figure></li>
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: BYD"><img src="img/byd.webp" width="900" height="674" loading="lazy" alt="BYD azul-turquesa, limpo, no pátio da loja"></button><figcaption>BYD</figcaption></figure></li>
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: Range Rover"><img src="img/evoque.webp" width="900" height="674" loading="lazy" alt="Range Rover azul-escuro, limpo, no pátio da loja"></button><figcaption>Range Rover</figcaption></figure></li>
+          <li><figure><button class="galeria-ampliar" type="button" aria-label="Ampliar: Chevrolet S10"><img src="img/s10.webp" width="900" height="506" loading="lazy" alt="Chevrolet S10 prata, limpa, no pátio da loja"></button><figcaption>Chevrolet S10</figcaption></figure></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="orcamento" aria-labelledby="titulo-orcamento">
+    <div class="envoltorio">
+      <div class="cabeca cabeca-lado">
+        <h2 id="titulo-orcamento">Monte o seu pedido</h2>
+        <p>Escolha o veículo e os serviços. A mensagem fica pronta para enviar no WhatsApp, e respondemos com o orçamento.</p>
+      </div>
+      <form class="ped-grade" id="pedido" action="#" onsubmit="return false">
+        <ol class="ped-passos">
+          <li><fieldset><legend>Qual é o veículo?</legend><div class="ped-opcoes" id="ped-veiculos"></div></fieldset></li>
+          <li><fieldset><legend>Quais serviços?<small>Pode marcar mais de um.</small></legend><div class="ped-opcoes ped-opcoes-largas" id="ped-servicos"></div></fieldset></li>
+          <li><fieldset><legend>Como prefere?</legend>
+            <div class="ped-opcoes ped-opcoes-largas" id="ped-entrega"></div>
+            <label class="ped-campo" id="ped-bairro-campo" hidden><span>Bairro ou endereço para buscar o carro <small>(opcional)</small></span><input type="text" id="ped-bairro" autocomplete="address-line1"></label>
+          </fieldset></li>
+          <li><fieldset><legend>Quando?</legend><div class="ped-opcoes" id="ped-quando"></div>
+            <label class="ped-campo"><span>Seu nome <small>(opcional)</small></span><input type="text" id="ped-nome" autocomplete="given-name"></label>
+          </fieldset></li>
+        </ol>
+        <div class="ped-painel">
+        <div class="ped-envio">
+          <h3>Sua mensagem</h3>
+          <div class="ped-progresso"><span id="ped-progresso-texto">Nenhum passo escolhido</span><ol aria-hidden="true"><li></li><li></li><li></li><li></li></ol></div>
+          <div class="conversa" aria-hidden="true">
+            <div class="conversa-topo"><span class="conversa-selo">SA</span><p><strong>Santo Antônio Estética Automotiva</strong><small>(16) 99239-9066</small></p></div>
+            <div class="conversa-corpo"><p class="balao" id="ped-balao"></p></div>
+          </div>
+          <p class="so-leitor" id="ped-mensagem-leitor" aria-live="polite"></p>
+          <a class="btn ped-enviar" id="ped-enviar" href="https://wa.me/5516992399066" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Enviar pelo WhatsApp</a>
+          <p>Se preferir, mande também uma foto do carro na conversa.</p>
+          <ol class="ped-depois">
+            <li><span><strong>Você envia o pedido</strong> pelo WhatsApp.</span></li>
+            <li><span><strong>Respondemos com o orçamento</strong> para o seu carro.</span></li>
+            <li><span><strong>Combinamos o dia</strong>, ou buscamos o carro no leva e traz.</span></li>
+          </ol>
+        </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao avaliacoes" id="avaliacoes" aria-labelledby="titulo-aval">
+    <div class="envoltorio">
+      <div class="aval-topo">
+        <h2 id="titulo-aval">O que dizem os clientes</h2>
+        <p class="aval-nota"><b>5,0</b><span><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.1l-5.9 3.3 1.3-6.6-4.9-4.5 6.6-.8z"/></svg></span>49 avaliações no Google, todas com 5 estrelas</span></p>
+      </div>
+      <ul class="aval-lista">
+        <li><blockquote>“Gostei muito do atendimento, Mário e sua equipe estão de parabéns, são muito detalhista em questão de cuidar do seu veiculo, meu carro toda vez que levo sai de lá impecável...”</blockquote><p><strong>Rodrigo B.</strong>, no Google</p></li>
+        <li><blockquote>“Extremamente profissionais, impecável e fazem um excelente trabalho. O carro parece que acabamos de tirar na concessionária, ficou lindo e novo de novo...”</blockquote><p><strong>Debora S.</strong>, no Google</p></li>
+        <li><blockquote>“Qualidade de serviço excelente, precisei realizar também a lavagem do motor do veículo e foi executado perfeitamente, o carro saiu em estado de novo!”</blockquote><p><strong>Erick D.</strong>, no Google</p></li>
+      </ul>
+      <p class="aval-mais"><a class="aval-link" href="https://www.google.com/maps/place/Santo+Ant%C3%B4nio+Est%C3%A9tica+Automotiva/@-21.3397606,-47.7351538,17z/data=!4m8!3m7!1s0x94b9c93fb84a79d9:0xdaf388b0cb5b3c23!8m2!3d-21.3397606!4d-47.7351538!9m1!1b1!16s%2Fg%2F11sr8wr6gx" target="_blank" rel="noopener">Ver todas as avaliações no Google</a></p>
+    </div>
+  </section>
+
+  <section class="secao secao-nevoa" id="onde" aria-labelledby="titulo-onde">
+    <div class="envoltorio contato-grade">
+      <div class="contato-dados">
+        <h2 id="titulo-onde">Onde estamos</h2>
+        <div><h3>WhatsApp</h3><a class="tel-grande" id="zap-contato" href="https://wa.me/5516992399066" target="_blank" rel="noopener">(16) 99239-9066</a>
+          <p class="tel-outro">Telefone fixo: <span class="a-preencher">(16) 3951-1540, confirmar se ainda atende</span></p></div>
+        <div><h3>Endereço</h3><p>Rua Bernardino de Campos, 94<br>Centro, Cravinhos, SP</p><p><a class="link-mapa" href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.3397606,-47.7351538" target="_blank" rel="noopener">Abrir no mapa</a></p></div>
+        <div><div class="horario-titulo"><h3>Horário</h3><span class="horario-agora" id="horario-agora"></span></div><dl class="horarios" id="horarios"></dl></div>
+      </div>
+      <div class="mapa" id="mapa">
+        <div class="mapa-capa">
+          <svg class="mapa-pino" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <p class="mapa-endereco"><strong>Rua Bernardino de Campos, 94</strong><span>Centro, Cravinhos</span></p>
+          <button class="btn btn-grafite" type="button" id="mostrar-mapa">Mostrar o mapa</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="envoltorio rodape-grade">
+    <a class="marca" href="#" translate="no"><strong>Santo Antônio</strong><span>Estética Automotiva</span></a>
+    <div class="rodape-dir">
+      <p>CNPJ 24.968.694/0001-13</p>
+      <p>© 2026 Santo Antônio Estética Automotiva</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <button class="visor-botao visor-fechar" type="button" id="visor-fechar" aria-label="Fechar a foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="visor-corpo">
+    <figure><img id="visor-img" src="data:," alt=""><figcaption id="visor-legenda"></figcaption></figure>
+    <div class="visor-navegacao">
+      <button class="visor-botao" type="button" id="visor-anterior" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button>
+      <span id="visor-contador" aria-live="polite"></span>
+      <button class="visor-botao" type="button" id="visor-proxima" aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<a class="zap-flutuante" id="zap-flutuante" href="https://wa.me/5516992399066" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" title="Conversar no WhatsApp" tabindex="-1">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   DADOS - o que a empresa muda fica aqui em cima
+   ============================================================ */
+const WHATSAPP = "5516992399066";
+/* horario (Google Maps): 0 = domingo */
+const HORARIO = { 0: [], 1: [["07:30", "17:00"]], 2: [["07:30", "17:00"]], 3: [["07:30", "17:00"]], 4: [["07:30", "17:00"]], 5: [["07:30", "17:00"]], 6: [["07:30", "13:00"]] };
+
+/* antes e depois: fotos do Instagram da loja (2022-2023), legendas tiradas.
+   foto = nome do arquivo em img/ (nome-antes.webp e nome-depois.webp) */
+const TRABALHOS = [
+  { foto: "picape",   w: 1080, h: 810,  titulo: "Lavagem completa", resumo: "Picape coberta de barro",
+    legenda: "Chevrolet S10 que chegou coberta de barro: lavagem completa por fora." },
+  { foto: "motor",    w: 1080, h: 750,  titulo: "Lavagem do motor", resumo: "Poeira e sujeira acumuladas",
+    legenda: "Motor com poeira e sujeira acumuladas, depois da lavagem." },
+  { foto: "volante1", w: 1080, h: 1070, titulo: "Revestimento de volante", resumo: "Volante Chevrolet gasto",
+    legenda: "Volante com o couro gasto, revestido com costura vermelha." },
+  { foto: "volante2", w: 1080, h: 1210, titulo: "Revestimento de volante", resumo: "Couro rasgado e descascando",
+    legenda: "Volante com o couro rasgado, revestido com costura vermelha." },
+  { foto: "volante3", w: 1080, h: 1210, titulo: "Revestimento de volante", resumo: "Volante Volkswagen gasto",
+    legenda: "Volante com o couro desgastado pelo uso, revestido." },
+];
+
+/* "Monte o seu pedido": opcoes de cada passo.
+   texto = como aparece no botao; dica = exemplos embaixo; msg = como entra na mensagem */
+const VEICULOS = [
+  { texto: "Hatch", dica: "Gol, Onix, HB20" },
+  { texto: "Sedã", dica: "Virtus, Cronos, Corolla" },
+  { texto: "SUV", dica: "T-Cross, Compass, Creta" },
+  { texto: "Picape", dica: "Strada, S10, Hilux" },
+  { texto: "Outro", dica: "Van, utilitário, moto" },
+];
+const SERVICOS = [
+  "Lavagem simples", "Lavagem completa", "Lavagem do motor", "Lavagem de bancos e carpetes",
+  "Limpeza de couro e camurça", "Polimento", "Cristalização", "Revestimento de volante",
+];
+const ENTREGA = [
+  { texto: "Levo o carro até a loja", msg: "levo o carro até a loja" },
+  { texto: "Quero o leva e traz", msg: "gostaria do leva e traz", leva: true },
+];
+const QUANDO = ["O quanto antes", "Durante a semana", "No sábado", "A combinar"];
+
+/* ============================================================ */
+const $ = (s) => document.querySelector(s);
+const zap = (t) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+const DIAS = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+/* agora em Cravinhos (horario de Brasilia), independente do fuso do aparelho */
+function agoraBrasilia() {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", hourCycle: "h23", weekday: "short" }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const dia = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(p.weekday);
+  return { dia, min: Number(p.hour) * 60 + Number(p.minute) };
+}
+const paraMin = (h) => { const [a, b] = h.split(":").map(Number); return a * 60 + b; };
+const hora = (h) => h.endsWith(":00") ? `${Number(h.slice(0, 2))}h` : `${Number(h.slice(0, 2))}h${h.slice(3)}`;
+
+function situacao() {
+  const a = agoraBrasilia(), hoje = HORARIO[a.dia] || [];
+  const faixa = hoje.find(([i, f]) => a.min >= paraMin(i) && a.min < paraMin(f));
+  if (faixa) return { aberto: true, texto: `Aberto agora, até as ${hora(faixa[1])}` };
+  const depois = hoje.find(([i]) => paraMin(i) > a.min);
+  if (depois) return { aberto: false, texto: `Fechado agora, abrimos às ${hora(depois[0])}` };
+  for (let k = 1; k <= 7; k++) {
+    const d = (a.dia + k) % 7, f = HORARIO[d];
+    if (f && f.length) return { aberto: false, texto: `Fechado agora, abrimos ${k === 1 ? "amanhã" : DIAS[d].toLowerCase()} às ${hora(f[0][0])}` };
+  }
+  return { aberto: false, texto: "Fechado agora" };
+}
+function montarStatus() {
+  const s = situacao(), el = $("#status");
+  el.classList.toggle("fechado", !s.aberto);
+  /* na faixa: titulo curto + uma linha (aberto: o horario; fechado: quando abre) */
+  el.querySelector("strong span").textContent = s.aberto ? s.texto.replace("Aberto agora, até", "Aberto até") : "Fechado agora";
+  const quando = s.texto.replace("Fechado agora, ", "");
+  el.querySelector(".faixa-agora-sub").textContent = s.aberto ? "Seg. a sex., 7h30 às 17h" : quando[0].toUpperCase() + quando.slice(1);
+  const ag = $("#horario-agora");
+  ag.textContent = s.aberto ? "Aberto agora" : "Fechado agora";
+  ag.classList.toggle("fechado", !s.aberto);
+}
+function montarHorarios() {
+  const hoje = agoraBrasilia().dia;
+  $("#horarios").innerHTML = [1, 2, 3, 4, 5, 6, 0].map((d) => {
+    const f = HORARIO[d];
+    const txt = f.length ? f.map(([i, fi]) => `${hora(i)} às ${hora(fi)}`).join(" e ") : "Fechado";
+    return `<div class="${d === hoje ? "hoje" : ""}"><dt>${DIAS[d]}${d === hoje ? " (hoje)" : ""}</dt><dd>${txt}</dd></div>`;
+  }).join("");
+}
+
+/* ---------- WhatsApp flutuante: aparece depois da abertura e sai no rodape ---------- */
+const flutuante = $("#zap-flutuante");
+function mostrarFlutuante() {
+  const passou = $(".abertura").getBoundingClientRect().bottom < 0 && $(".rodape").getBoundingClientRect().top > innerHeight;
+  flutuante.classList.toggle("visivel", passou);
+  flutuante.tabIndex = passou ? 0 : -1;
+}
+addEventListener("scroll", mostrarFlutuante, { passive: true });
+
+/* ---------- WhatsApp ---------- */
+const geral = zap("Olá! Vim pelo site da Santo Antônio Estética Automotiva e gostaria de atendimento.");
+["#zap-topo", "#zap-faixa", "#zap-contato", "#zap-flutuante"].forEach((s) => { $(s).href = geral; });
+
+/* ---------- antes e depois ---------- */
+const comp = $("#comparador"), adRange = $("#ad-range");
+const semMovimento = matchMedia("(prefers-reduced-motion: reduce)");
+function adPosicao(p) {
+  p = Math.max(0, Math.min(100, p));
+  comp.style.setProperty("--pos", p + "%");
+  adRange.value = Math.round(p);
+  adRange.setAttribute("aria-valuetext", `${Math.round(100 - p)}% da foto de depois`);
+  comp.classList.toggle("perto-esquerda", p < 16);
+  comp.classList.toggle("perto-direita", p > 84);
+}
+function adMostrar(i) {
+  const t = TRABALHOS[i];
+  $("#ad-antes").src = `img/${t.foto}-antes.webp`;
+  $("#ad-depois").src = `img/${t.foto}-depois.webp`;
+  ["#ad-antes", "#ad-depois"].forEach((s) => { $(s).width = t.w; $(s).height = t.h; });
+  $("#ad-antes").alt = `Antes: ${t.legenda}`;
+  $("#ad-depois").alt = `Depois: ${t.legenda}`;
+  comp.style.setProperty("--prop", (t.w / t.h).toFixed(3));
+  $(".ad-legenda").style.setProperty("--prop", (t.w / t.h).toFixed(3));
+  $("#ad-legenda").textContent = t.legenda;
+  document.querySelectorAll(".ad-item").forEach((b, k) => b.setAttribute("aria-pressed", String(k === i)));
+  adPosicao(50);
+}
+$("#ad-lista").innerHTML = TRABALHOS.map((t, i) =>
+  `<li><button class="ad-item" type="button" data-i="${i}" aria-pressed="false"><img src="img/mini-${t.foto}.webp" width="176" height="176" loading="lazy" alt=""><span><strong></strong><small></small></span></button></li>`).join("");
+document.querySelectorAll(".ad-item").forEach((b, i) => {
+  b.querySelector("strong").textContent = TRABALHOS[i].titulo;
+  b.querySelector("small").textContent = TRABALHOS[i].resumo;
+  b.addEventListener("click", () => adMostrar(i));
+});
+/* arrastar: o dedo na horizontal move a barra; na vertical a pagina rola (touch-action: pan-y) */
+let arrastando = false;
+const adDoPonteiro = (e) => { const r = comp.getBoundingClientRect(); adPosicao(((e.clientX - r.left) / r.width) * 100); };
+comp.addEventListener("pointerdown", (e) => { arrastando = true; comp.classList.remove("mostrando"); comp.setPointerCapture(e.pointerId); adDoPonteiro(e); });
+comp.addEventListener("pointermove", (e) => { if (arrastando) adDoPonteiro(e); });
+["pointerup", "pointercancel"].forEach((ev) => comp.addEventListener(ev, () => { arrastando = false; }));
+adRange.addEventListener("input", () => { comp.classList.remove("mostrando"); adPosicao(Number(adRange.value)); });
+adMostrar(0);
+/* uma vez so, quando aparece: a barra anda sozinha e volta, pra mostrar que da pra arrastar */
+if (!semMovimento.matches && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver((ent) => {
+    if (!ent[0].isIntersecting) return;
+    io.disconnect();
+    comp.classList.add("mostrando");
+    setTimeout(() => { if (comp.classList.contains("mostrando")) adPosicao(22); }, 250);
+    setTimeout(() => { if (comp.classList.contains("mostrando")) adPosicao(50); }, 1250);
+    setTimeout(() => comp.classList.remove("mostrando"), 2200);
+  }, { threshold: .6 });
+  io.observe(comp);
+}
+
+/* ---------- galeria: setas andam um carro por vez ---------- */
+const tira = $("#galeria-tira"), itensTira = [...tira.children];
+function tiraSetas() {
+  $("#galeria-anterior").disabled = tira.scrollLeft < 8;
+  $("#galeria-proxima").disabled = tira.scrollLeft + tira.clientWidth > tira.scrollWidth - 8;
+}
+function tiraAndar(dir) {
+  /* posicao exata do proximo item (scrollBy relativo nao anda com scroll-snap mandatory) */
+  const base = itensTira[0].offsetLeft;
+  const atual = itensTira.findIndex((li) => li.offsetLeft - base >= tira.scrollLeft - 4);
+  const alvo = itensTira[Math.max(0, Math.min(itensTira.length - 1, atual + dir))];
+  tira.scrollTo({ left: alvo.offsetLeft - base, behavior: semMovimento.matches ? "auto" : "smooth" });
+}
+$("#galeria-anterior").addEventListener("click", () => tiraAndar(-1));
+$("#galeria-proxima").addEventListener("click", () => tiraAndar(1));
+tira.addEventListener("scroll", tiraSetas, { passive: true });
+addEventListener("resize", tiraSetas);
+tiraSetas();
+
+/* ---------- visor: clicar na foto amplia ---------- */
+const visor = $("#visor"), visorImg = $("#visor-img");
+const fotosGaleria = [...document.querySelectorAll(".galeria-ampliar")];
+let fotoAtual = 0, fotoOrigem = null, visorPeloTeclado = false;
+function mostrarFoto(i, trocar) {
+  fotoAtual = (i + fotosGaleria.length) % fotosGaleria.length;
+  const img = fotosGaleria[fotoAtual].querySelector("img");
+  visorImg.src = img.currentSrc || img.src;
+  visorImg.alt = img.alt;
+  $("#visor-legenda").textContent = fotosGaleria[fotoAtual].closest("figure").querySelector("figcaption").textContent;
+  $("#visor-contador").textContent = `${fotoAtual + 1} de ${fotosGaleria.length}`;
+  if (trocar && !semMovimento.matches) { visorImg.classList.remove("trocando"); void visorImg.offsetWidth; visorImg.classList.add("trocando"); }
+}
+function abrirVisor(i, peloTeclado) {
+  fotoOrigem = fotosGaleria[i];
+  visorPeloTeclado = peloTeclado;
+  mostrarFoto(i, false);
+  visor.showModal();
+  $("#visor-fechar").blur(); $("#visor-fechar").focus({ focusVisible: peloTeclado });
+}
+/* fecha com a animacao de saida; o estado e limpo aqui (o evento "close" nem sempre dispara) */
+function fecharVisor() {
+  if (!visor.open || visor.classList.contains("saindo")) return;
+  const terminar = () => { visor.classList.remove("saindo"); if (visor.open) visor.close(); if (fotoOrigem) fotoOrigem.focus({ focusVisible: visorPeloTeclado }); };
+  if (semMovimento.matches) return terminar();
+  visor.classList.add("saindo");
+  visor.addEventListener("animationend", terminar, { once: true });
+  setTimeout(() => { if (visor.classList.contains("saindo")) terminar(); }, 400);
+}
+fotosGaleria.forEach((b, i) => b.addEventListener("click", (e) => abrirVisor(i, e.detail === 0)));
+$("#visor-fechar").addEventListener("click", fecharVisor);
+$("#visor-anterior").addEventListener("click", () => mostrarFoto(fotoAtual - 1, true));
+$("#visor-proxima").addEventListener("click", () => mostrarFoto(fotoAtual + 1, true));
+visor.addEventListener("click", (e) => { if (e.target === visor || e.target.classList.contains("visor-corpo")) fecharVisor(); });
+visor.addEventListener("cancel", (e) => { e.preventDefault(); fecharVisor(); });
+visor.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") mostrarFoto(fotoAtual - 1, true);
+  if (e.key === "ArrowRight") mostrarFoto(fotoAtual + 1, true);
+});
+let toqueX = null;
+visor.addEventListener("touchstart", (e) => { toqueX = e.touches[0].clientX; }, { passive: true });
+visor.addEventListener("touchend", (e) => {
+  if (toqueX === null) return;
+  const dx = e.changedTouches[0].clientX - toqueX; toqueX = null;
+  if (Math.abs(dx) > 50) mostrarFoto(fotoAtual + (dx < 0 ? 1 : -1), true);
+});
+
+/* ---------- monte o seu pedido ---------- */
+function opcoes(alvo, nome, tipo, lista) {
+  $(alvo).innerHTML = lista.map((o, i) => `<label class="ped-opcao"><input type="${tipo}" name="${nome}" value="${i}"><strong></strong>${o.dica ? "<small></small>" : ""}</label>`).join("");
+  $(alvo).querySelectorAll(".ped-opcao").forEach((l, i) => {
+    const o = lista[i];
+    l.querySelector("strong").textContent = typeof o === "string" ? o : o.texto;
+    if (o.dica) l.querySelector("small").textContent = o.dica;
+  });
+}
+opcoes("#ped-veiculos", "veiculo", "radio", VEICULOS);
+opcoes("#ped-servicos", "servico", "checkbox", SERVICOS);
+opcoes("#ped-entrega", "entrega", "radio", ENTREGA);
+opcoes("#ped-quando", "quando", "radio", QUANDO);
+const marcado = (nome) => [...document.querySelectorAll(`#pedido input[name="${nome}"]:checked`)].map((c) => Number(c.value));
+const minusc = (t) => t[0].toLowerCase() + t.slice(1);
+const juntar = (l) => l.length < 2 ? l.join("") : `${l.slice(0, -1).join(", ")} e ${l[l.length - 1]}`;   /* "a, b e c" */
+
+function pedidoMensagem(animar) {
+  const v = marcado("veiculo")[0], s = marcado("servico"), e = marcado("entrega")[0], q = marcado("quando")[0];
+  const nome = $("#ped-nome").value.trim(), bairro = $("#ped-bairro").value.trim();
+  const leva = e !== undefined && !!ENTREGA[e].leva;
+  $("#ped-bairro-campo").hidden = !leva;
+  const linhas = ["Olá! Vim pelo site e gostaria de um orçamento."];
+  if (v !== undefined) linhas.push(`Veículo: ${VEICULOS[v].texto === "Outro" ? "outro tipo (explico na conversa)" : VEICULOS[v].texto}`);
+  linhas.push(`Serviços: ${s.length ? juntar(s.map((i) => minusc(SERVICOS[i]))) : "ainda não sei, gostaria de uma indicação"}`);
+  if (e !== undefined) linhas.push(`Entrega: ${ENTREGA[e].msg}${leva && bairro ? ` (${bairro})` : ""}`);
+  if (q !== undefined) linhas.push(`Quando: ${minusc(QUANDO[q])}`);
+  if (nome) linhas.push(`Nome: ${nome}`);
+  const texto = linhas.join("\n");
+  const balao = $("#ped-balao");
+  balao.textContent = texto;
+  if (animar && !semMovimento.matches) { balao.classList.remove("trocou"); void balao.offsetWidth; balao.classList.add("trocou"); }
+  $("#ped-enviar").href = zap(texto);
+  /* progresso: quais dos 4 passos ja tem escolha */
+  const feitos = [v !== undefined, s.length > 0, e !== undefined, q !== undefined];
+  document.querySelectorAll(".ped-progresso li").forEach((li, i) => li.classList.toggle("feito", feitos[i]));
+  document.querySelectorAll(".ped-passos > li").forEach((li, i) => li.classList.toggle("feito", feitos[i]));
+  const n = feitos.filter(Boolean).length;
+  $("#ped-progresso-texto").textContent = n === 0 ? "Nenhum passo escolhido" : n === 4 ? "Pedido completo" : `${n} de 4 passos escolhidos`;
+}
+$("#pedido").addEventListener("change", () => pedidoMensagem(true));
+["#ped-nome", "#ped-bairro"].forEach((s) => $(s).addEventListener("input", () => pedidoMensagem(false)));
+/* para o leitor de tela: a mensagem e lida quando a pessoa chega no botao */
+$("#ped-enviar").addEventListener("focus", () => { $("#ped-mensagem-leitor").textContent = "Mensagem: " + $("#ped-balao").textContent; });
+pedidoMensagem(false);
+
+/* ---------- mapa: so carrega no clique ---------- */
+$("#mostrar-mapa").addEventListener("click", () => {
+  $("#mapa").innerHTML = '<iframe class="mapa-quadro" title="Mapa: Santo Antônio Estética Automotiva na Rua Bernardino de Campos, 94, Cravinhos" ' +
+    'src="https://maps.google.com/maps?q=-21.3397606,-47.7351538&hl=pt-BR&z=17&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+  $("#mapa iframe").focus();
+});
+
+/* ---------- menu do celular ---------- */
+const topo = $(".topo"), menuBotao = $("#menu-botao");
+function menu(abrir) {
+  topo.classList.toggle("menu-aberto", abrir);
+  menuBotao.setAttribute("aria-expanded", String(abrir));
+  menuBotao.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+menuBotao.addEventListener("click", () => menu(!topo.classList.contains("menu-aberto")));
+$("#menu").addEventListener("click", (e) => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", (e) => { if (!topo.contains(e.target)) menu(false); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && topo.classList.contains("menu-aberto")) { menu(false); menuBotao.focus(); }
+});
+/* o menu cabe numa linha? se nao, vira as 3 barrinhas (vale para celular, tablet e fonte grande) */
+function ajustarMenu() {
+  const eraCompacto = topo.classList.contains("compacto");
+  topo.classList.remove("compacto");
+  const marca = $(".topo .marca").getBoundingClientRect(), m = $("#menu"), links = [...m.children];
+  const caixas = links.map((a) => a.getBoundingClientRect());
+  const outraLinha = caixas.some((r) => r.top >= caixas[0].bottom - 1);   /* algum item desceu abaixo do primeiro */
+  const quebrou = m.getBoundingClientRect().top >= marca.bottom - 2 || outraLinha || $(".topo-grade").scrollWidth > $(".topo-grade").clientWidth + 1;
+  topo.classList.toggle("compacto", quebrou);
+  if (eraCompacto && !quebrou) menu(false);
+}
+ajustarMenu();
+addEventListener("resize", ajustarMenu);
+document.fonts.ready.then(ajustarMenu);
+
+montarStatus(); montarHorarios(); mostrarFlutuante();
+setInterval(montarStatus, 60000);
+</script>
+</body>
+</html>
