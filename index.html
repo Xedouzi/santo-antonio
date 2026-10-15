@@ -536,7 +536,7 @@
   .topo.compacto .menu .menu-tel { justify-content: center; }
 
   /* abertura: Amarok bem escurecida, luz so do lado direito */
-  .abertura { background: #0B0C0F; min-height: clamp(600px, 90vh, 900px); }
+  .abertura { background: #0B0C0F; min-height: clamp(560px, calc(100svh - 9.25rem), 900px); }   /* topo + faixa = ~9,25rem: as duas aparecem juntas */
   .abertura-fundo { filter: brightness(.62) saturate(.85) contrast(1.08); object-position: 70% 55%; }
   .abertura::before { background:
       radial-gradient(ellipse 70% 80% at 72% 50%, rgba(11, 12, 15, 0) 0%, rgba(11, 12, 15, .55) 60%, rgba(11, 12, 15, .92) 100%),
@@ -545,6 +545,8 @@
   .abertura-conteudo.envoltorio { max-width: calc(var(--largura) + 240px); }
   .abertura-conteudo { align-self: start; grid-template-columns: minmax(0, 44rem); padding-top: clamp(4rem, 18vh, 11rem); }
   @media (max-width: 760px) { .abertura-conteudo { padding-top: 1.75rem; } }
+  /* notebook (tela baixa): menos respiro, para a faixa de baixo ainda aparecer junto */
+  @media (min-width: 761px) and (max-height: 800px) { .abertura-conteudo { padding-top: max(1.5rem, calc(18vh - 2.5rem)); padding-bottom: 2.5rem; } }
   .abertura-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; min-width: 0; }
   .abertura h1 { display: grid; font-size: min(clamp(2.6rem, 1.4rem + 3.6vw, 4.6rem), 11.5vw);   /* 11.5vw: a palavra mais longa cabe na linha mesmo com letra grande */ line-height: 1.02; text-transform: uppercase; letter-spacing: 0;
     /* Russo One: traco grosso e cantos quadrados, cara de emblema de carro; so tem um peso */
@@ -572,8 +574,12 @@
 
   /* faixa: escura, icones amarelos */
   .faixa { background: #15171C; color: var(--tinta); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+  .faixa-grade { padding-block: .85rem; }
+  .faixa-item strong { font-size: 1.05rem; }
+  .faixa-item svg { width: 2.1rem; height: 2.1rem; }
   .faixa-item svg { color: var(--amarelo); }
   .faixa-item span { color: var(--tinta-2); }
+  .faixa-item strong span { color: inherit; }
   .faixa-item + .faixa-item { border-left-color: var(--linha); }
   .faixa-agora i { background: #4ADE80; box-shadow: 0 0 0 3px rgba(74, 222, 128, .2); }
   .faixa-agora.fechado i { background: #FF8A80; box-shadow: 0 0 0 3px rgba(255, 138, 128, .2); }
